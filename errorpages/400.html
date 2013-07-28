@@ -13,29 +13,35 @@
 	  	<meta name="web_author" content="Xenon Apps">
 
 	  	<!--Favicon -->
-	  	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	  	<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="../images/favicon.ico" type="image/x-icon">
 
 	  	<!-- Important CSS we want to load right away is inline for fast page loading -->
 		<style type="text/css">
 			html{
-				background: url('images/dark_mosaic.png'); /*http://subtlepatterns.com/dark-mosaic/*/
+				background: url('../images/dark_mosaic.png'); /*http://subtlepatterns.com/dark-mosaic/*/
 			}
-			/*Because this is a splash page, we don't need to use an id to target the image*/
+			h1,p,a{
+				text-align: center;
+				color: #FFFFFF;
+			}
 			img{
 				width:30%;
 				margin-left: 35%;
 				margin-top: 20%;
 			}
+			a:hover{
+				color: #00f0f0;
+			}
 		</style>
-
-	  	<!-- Non critical css to stylesheets dir -->
-
 	</head>
 
 	<body>
-
-		<img src="images/xenonweb.png" alt="Xenon Apps website logo image"/>
+		<h1>400: "I can't let you do that Dave"</h1>
+		<p>
+			You've made a bad request to our site. Now how'd you do that? Let us <a href="../contact.html">know</a>.
+		</p>
+		<img src="../images/xenonweb.png" alt="Xenon Apps website logo image"/>
 
 	</body>
 
