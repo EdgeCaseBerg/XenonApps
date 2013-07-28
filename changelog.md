@@ -52,7 +52,7 @@ Release 0.1
 	- Directory Structure as per Issue #1  (Commit 837d754)
 	- Splash page being used as index page as per Issue #2 (Commit 44c849)
 	- Initial license and readme file (Commit fecd55bc and 1888570)
-	- Created Change log file
+	- Created Change log file (Commit 23e02c1)
 
 
 -------------------------------------------------------------------------------
