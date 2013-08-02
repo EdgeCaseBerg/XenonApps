@@ -1,0 +1,26 @@
+nav ul{
+	text-align: center;
+	list-style-type: none;
+}
+nav ul li{
+	width: 20%;
+	display: inline-block;
+}
+nav a{
+	text-transform: uppercase;
+}
+
+/*For the hr preceeded by header*/
+header + hr{
+	width: 80%;
+	border-color: #00f0ff;
+}
+
+section{
+	margin-left: 10%;
+	width: 80%;
+}
+section p{
+	margin-left: 5%;
+	width: 50%;
+}
