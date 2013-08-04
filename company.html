@@ -7,12 +7,13 @@
 	  	<META name="keywords" content="Xenon Apps, xenon, website, company, profiles, mission"> <!-- Add more keywords as we create pages (Names for profiles)-->
 	  	<meta name="robots" content="index, follow" >
 	  	<meta name="revisit-after" content="1 month">
-	  	<meta name="author" content="Ethan Eldridge, Shelby Smullen, Joshua Dickerson">
-	  	
+	  	<meta name="author" content="Ethan Eldridge, Scott MacEwan, Shelby Smullen, Joshua Dickerson">
+
 
 	  	<!--Favicon -->
 	  	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+		<script type="text/javascript" src="javascript/jquery.1.10.2.js"></script>
 
 	  	<!-- Important CSS we want to load right away is inline for fast page loading -->
 		<style type="text/css">
@@ -23,6 +24,35 @@
 			#logo{ /*It may be wise to have multiple image sizes instead of just setting the logo? not sure*/
 				width:10%;
 				margin-left: 10%;
+			}
+			#member-list{
+				width:20%;
+				float: left;
+				list-style-type: none;
+				margin: 1em 0 1em 0;
+			}
+			#member-list li{
+				padding: 1em 0 1em 20%;
+				border: 1px solid white;
+			}
+			#member-list li.active{
+				background-color: white;
+				color: black;
+			}
+			#profile-container{
+				width:75%;
+				float: left;
+				background-color: white;
+				color: black;
+				margin: 1em 0 1em 0;
+			}
+			#profile-container p{
+				width: 90%;
+				margin: 5% 5% 5% 5%
+			}
+			#profile-container img{
+				width: 90%;
+				margin: 5% 5% 5% 5%
 			}
 		</style>
 
@@ -49,7 +79,7 @@
 		</header>
 
 		<hr>
-		
+
 		<section>
 			<h2>Who's behind Xenon Apps?</h2>
 			<p>
@@ -60,9 +90,9 @@
 				Most of us here at Xenon Apps are based from Burlington VT, USA. But we have a great designer from Somersworth, NH and have collaborated with another who lives in New Jersey on our Green Up VT application. If you want to get to know us, check out some of our profiles below.
 			</p>
 		</section>
-
+		<!-- And this is where we do something fancy
 		<section>
-			<!-- And this is where we do something fancy -->
+
 			<h2>Who each of us are</h2>
 			<dl>
 				<dt>Collin Dewitt</dt>
@@ -83,7 +113,83 @@
 				<dd>Is wicked awesome at creating pretty things! Like our logo!</dd>
 			</dl>
 		</section>
+		-->
+		<section>
+			<ul id="member-list">
+				<li class="active" data="collin">Collin Dewitt</li>
+				<li data="ethan">Ethan Eldridge</li>
+				<li data="anders">Anders Melen</li>
+				<li data="evan">Evan Yandell</li>
+				<li data="joshua">Joshua Dickerson</li>
+				<li data="phelan">Phelan Vendeville</li>
+				<li data="scott">Scott MacEwan</li>
+				<li data="shelby">Shelby Smullen</li>
+			</ul>
+			<div id="profile-container">
+				<img src="images/xenonweb.png"></img>
+				<div id="bio">
+				</div>
+			</div>
+		</section>
+		<script type="text/javascript">
+			var collin_bio = '<p>Not to be confused with booker dewitt</p>';
+			var ethan_bio = '<p>Is a programmer</p>';
+			var anders_bio = '<p>Is a man man man</p>';
+			var evan_bio = '<p>Is he even a part of this I don\'t know?</p>';
+			var joshua_bio = '<p>Used to be a soldier!</p>';
+			var phelan_bio = '<p>Used to be a sailor!</p>';
+			var scott_bio = '<p>Poops a lot and makes jokes about his farts!</p>';
+			var shelby_bio = '<p>Is wicked awesome at creating pretty things! Like our logo!</p>';
+			$('#member-list li').on('click', function(){
+				switch($(this).attr('data')){
+					case 'collin':
+						switchActiveClass(this);
+						$('#profile-container img').attr('src', 'images/xenonweb.png');
+						$('#profile-container #bio').html(collin_bio);
+						break;
+					case 'ethan':
+						switchActiveClass(this);
+						$('#profile-container img').attr('src', 'images/xenonweb.png');
+						$('#profile-container #bio').html(ethan_bio);
+						break;
+					case 'anders':
+						switchActiveClass(this);
+						$('#profile-container img').attr('src', 'images/xenonweb.png');
+						$('#profile-container #bio').html(anders_bio);
+						break;
+					case 'evan':
+						switchActiveClass(this);
+						$('#profile-container img').attr('src', 'images/xenonweb.png');
+						$('#profile-container #bio').html(evan_bio);
+						break;
+					case 'joshua':
+						switchActiveClass(this);
+						$('#profile-container img').attr('src', 'images/xenonweb.png');
+						$('#profile-container #bio').html(joshua_bio);
+						break;
+					case 'phelan':
+						switchActiveClass(this);
+						$('#profile-container img').attr('src', 'images/xenonweb.png');
+						$('#profile-container #bio').html(phelan_bio);
+						break;
+					case 'scott':
+						switchActiveClass(this);
+						$('#profile-container img').attr('src', 'images/xenonweb.png');
+						$('#profile-container #bio').html(scott_bio);
+						break;
+					case 'shelby':
+						switchActiveClass(this);
+						$('#profile-container img').attr('src', 'images/xenonweb.png');
+						$('#profile-container #bio').html(shelby_bio);
+						break;
+				}
+			});
 
+			function switchActiveClass(node){
+				$('#member-list li.active').removeClass('active');
+				$(node).addClass('active');
+			}
+		</script>
 	</body>
 
 </html>
