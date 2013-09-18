@@ -26,6 +26,12 @@
 				margin-left: 1em;
 				padding-left: 0;
 			}
+			#member-list li:before{
+				text-decoration: underline;
+				padding: 1em;
+				padding-left: 0;
+				content: ">";
+			}
 			#member-list li{
 				padding: 1em 0 1em 20%;
 				border: 1px solid #00f0ff;
@@ -36,6 +42,10 @@
 			}	
 			#member-list li:hover{
 				background-color: #00f0ff;
+				cursor: pointer;
+			}
+			#member-list li:hover:before{
+				content: "v";
 			}
 			#member-list li.active{
 				background-color: #0000ff;
