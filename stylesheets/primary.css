@@ -34,3 +34,9 @@ section dl dt{
 section dl dd p{
 	width: 80%;
 }
+.emphasize{
+	font-style: italic;
+}
+section ul{
+	margin-left: 5%;
+}
