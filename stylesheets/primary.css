@@ -24,3 +24,19 @@ section p{
 	margin-left: 5%;
 	width: 50%;
 }
+
+section dl dt{
+	border-bottom: #00f0ff solid thick;
+	font-size: 110%;
+	font-weight: bolder;
+	text-align: center;
+}
+section dl dd p{
+	width: 80%;
+}
+.emphasize{
+	font-style: italic;
+}
+section ul{
+	margin-left: 5%;
+}

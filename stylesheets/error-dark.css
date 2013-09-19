@@ -1,0 +1,16 @@
+html{
+	background: url('/images/dark_mosaic.png'); /*http://subtlepatterns.com/dark-mosaic/*/
+}
+h1,p,a{
+	text-align: center;
+	color: #FFFFFF;
+}
+img{
+	width:30%;
+	margin-left: 35%;
+	margin-top: 20%;
+}
+a:hover{
+	color: #00f0f0;
+}
+		
