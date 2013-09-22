@@ -1,5 +1,5 @@
 html{
-	background: url('/images/concrete_wall_2.png'); /*http://subtlepatterns.com/concrete-wall-2/*/
+	background: url('../images/concrete_wall_2.png'); /*http://subtlepatterns.com/concrete-wall-2/*/
 	color: #000000; /*I need to see */
 }
 #logo{ /*It may be wise to have multiple image sizes instead of just setting the logo? not sure*/
