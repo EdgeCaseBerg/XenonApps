@@ -1,0 +1,139 @@
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/main.css' />
+    <script src="/app.js"></script>
+    <meta name="description" content="<%= description %>" />
+    <meta name="robots" content="index, follow" >
+	<meta name="revisit-after" content="1 month">
+	<meta name="author" content="Ethan Eldridge, Scott MacEwan, Shelby Smullen, Joshua Dickerson">
+	<link rel="shortcut icon" href="/images/favicon.jpg" type="image/jpg">
+	<link rel="icon" href="/images/favicon.jpg" type="image/jpg">
+	<!-- Important css for fast loading -->
+    <style type="text/css">
+			#member-list{
+				width:20%;
+				float: left;
+				list-style-type: none;
+				margin: 1em 0 1em 0;
+				background-color: black;
+				margin-left: 1em;
+				padding-left: 0;
+			}
+			#member-list li:before{
+				text-decoration: underline;
+				padding: 1em;
+				padding-left: 0;
+				content: ">";
+			}
+			#member-list li{
+				padding: 1em 0 1em 20%;
+				border: 1px solid #00f0ff;
+				font-weight: bolder;
+				transition: opacity,background-color .5s ease-in-out;
+				-moz-transition: opacity,background-color .5s ease-in-out;
+    			-webkit-transition: opacity,background-color .5s ease-in-out;
+			}	
+			#member-list li:hover{
+				background-color: #00f0ff;
+				cursor: pointer;
+			}
+			#member-list li:hover:before{
+				content: "v";
+			}
+			#member-list li.active{
+				background-color: #0000ff;
+				
+			}
+			#profile-container{
+				width:75%;
+				float: left;
+			
+				margin: 1em 0 1em 0;
+			}
+			#profile-container p{
+				width: 90%;
+				margin: 5% 5% 5% 5%
+			}
+			#profile-container img{
+				float: right;
+				width: 50%;
+				margin: 5% 5% 5% 5%
+			}
+			#bio h2 {
+				margin: 2%;
+				color: #00f0ff;
+			}
+			#bio h2 a{
+				color: #00f0ff;
+				text-decoration: none;
+			}
+		</style>
+  </head>
+  <body>
+    <%- partial("_header") %>
+    <hr>
+    <section>
+	<ul id="member-list">
+		<li class="active"><a href="index.html">Xenon Apps</a></li>
+		<li><a href="joshua.html">Joshua Dickerson</a></li>
+		<li><a href="ethan.<html>
+		<head>
+			<title></title>
+		</head>
+		<body>
+		
+		</body>
+		</html>">Ethan Eldridge</a></li>
+		<li><a href="scott.<html>
+		<head>
+			<title></title>
+		</head>
+		<body>
+		
+		</body>
+		</html>">Scott MacEwan</a></li>
+		<li><a href="anders.<html>
+		<head>
+			<title></title>
+		</head>
+		<body>
+		
+		</body>
+		</html>">Anders Melen</a></li>
+		<li><a href="shelby.<html>
+		<head>
+			<title></title>
+		</head>
+		<body>
+		
+		</body>
+		</html>">Shelby Smullen</a></li>
+		<li><a href="phelan.<html>
+		<head>
+			<title></title>
+		</head>
+		<body>
+		
+		</body>
+		</html>">Phelan Vendeville</a></li>
+		<li><a href="evan.<html>
+		<head>
+			<title></title>
+		</head>
+		<body>
+		
+		</body>
+		</html>">Evan Yandell</a></li>
+	</ul>
+	<div id="profile-container">
+		<%- yield %>
+	</div>
+	</section>
+    <div id="footer">
+      <p>
+      	Copyright XenonApps 2014
+      </p>
+    </div>
+  </body>
+</html>
