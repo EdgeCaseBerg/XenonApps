@@ -34,7 +34,10 @@ a:hover{
 #content{
   width: 80%;
   margin-left: 10%;
-  box-shadow: .25em .25em .25em .25em #000006;
+  box-shadow: 5px 2px 10px black;
+  margin-top: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 nav ul{
@@ -52,18 +55,11 @@ nav a{
   text-transform: uppercase;
 }
 
-/*For the hr preceeded by header*/
-header + hr{
-  width: 80%;
-  border-color: #00f0ff;
-}
-
 section{
   margin-left: 10%;
   width: 80%;
 }
 section p{
-  margin-left: 5%;
   width: 50%;
 }
 
@@ -86,4 +82,63 @@ section ul{
 #footer{
   margin-left: 10%;
   clear: both;
+}
+
+/* Profiles and Company section */
+#member-list{
+  width:25%;
+  float: left;
+  list-style-type: none;
+  margin: 1em 0 1em 0;
+  background-color: black;
+  margin-left: 1em;
+  padding-left: 0;
+}
+#member-list li:before{
+  text-decoration: underline;
+  padding: 1em;
+  padding-left: 0;
+  content: ">";
+}
+#member-list li{
+  padding: 1em 0 1em 20%;
+  border: 1px solid #00f0ff;
+  font-weight: bolder;
+  transition: opacity,background-color .5s ease-in-out;
+  -moz-transition: opacity,background-color .5s ease-in-out;
+    -webkit-transition: opacity,background-color .5s ease-in-out;
+} 
+#member-list li:hover{
+  background-color: #00f0ff;
+  cursor: pointer;
+}
+#member-list li:hover:before{
+  content: "v";
+}
+#member-list li.active{
+  background-color: #0000ff;
+  
+}
+#profile-container{
+  width:70%;
+  float: left;
+
+  margin: 1em 0 1em 0;
+}
+#profile-container p{
+  width: 90%;
+  margin: 5% 5% 5% 5%
+}
+#profile-container img{
+  float: right;
+  width: 50%;
+  margin: 5% 5% 5% 5%
+}
+#bio h2 {
+  margin: 2%;
+  color: #00f0ff;
+}
+#bio h2 a{
+  color: #00f0ff;
+  text-decoration: none;
 }
