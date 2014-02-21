@@ -37,21 +37,22 @@
 		</header>
 
 		<hr>
-		<%- yield %>
-
-		<section>
-			<h2>Projects</h2>
-			<% for(var slug in public.projects._data){ %>
-				<%if (slug != current.source) {%>
-				<div class="project-block">
-			  		<h3><a href="/projects/<%= slug %>.html"><%= public.projects._data[slug].title %></a></h3>
-			  		<p>
-			  			<%= public.projects._data[slug].description %>
-			  		</p>
-			  	</div>
-			  	<% }; %>
-			<% }; %>
-		</section>
+		<div id="content">
+			<%- yield %>
+			<section>
+				<h2>Projects</h2>
+				<% for(var slug in public.projects._data){ %>
+					<%if (slug != current.source) {%>
+					<div class="project-block">
+				  		<h3><a href="/projects/<%= slug %>.html"><%= public.projects._data[slug].title %></a></h3>
+				  		<p>
+				  			<%= public.projects._data[slug].description %>
+				  		</p>
+				  	</div>
+				  	<% }; %>
+				<% }; %>
+			</section>
+		</div>	
 	</body>
 
 </html>
