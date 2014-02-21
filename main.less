@@ -1,14 +1,24 @@
 /* General Background and layout */
 html{
-  background: url('../images/dark_mosaic.png'); /*http://subtlepatterns.com/dark-mosaic/*/
+  /*background: url('../images/dark_mosaic.png'); /*http://subtlepatterns.com/dark-mosaic/*/
   color: #ffffff; /*I need to see */
-  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
-font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
-font-family: Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, "URW Palladio L", "Nimbus Roman No9 L", serif;
-font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+  background-color: #333;
+  padding: 0;
+  margin: 0;
+  color: #cbcbcb;
 }
 body{
-  background-color:rgba(0,0,40,0.5);
+  padding: 0;
+  margin: 0;
+  background-color:rgba(0,0,40,0.2);
+}
+header{
+  padding-top: 10px;
+  padding-bottom: 5px;
+  width: 80%;
+  margin-left: 10%;
+  background-color: black;
 }
 #logo{ /*It may be wise to have multiple image sizes instead of just setting the logo? not sure*/
   width:10%;
@@ -46,10 +56,13 @@ a:hover{
 nav ul{
   text-align: center;
   list-style-type: none;
+  border-bottom: thin solid #000066;
 }
 nav ul li{
   width: 20%;
   display: inline-block;
+}
+nav ul li:hover{
 }
 nav a{
   text-transform: uppercase;
