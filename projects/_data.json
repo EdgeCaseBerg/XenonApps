@@ -6,5 +6,20 @@
 	"greenupvt" : {
 		"title" : "Green Up Vermont",
 		"description" : "Xenon Developers decided to work on creating an application to make Green Up Day in Vermont even better"
+	},
+	"stuff" : {
+		"title" : "STUFF"
+	},
+	"stuff2" : {
+		"title" : "STUFF"
+	},
+	"stuff3" : {
+		"title" : "STUFF"
+	},
+	"stuff4" : {
+		"title" : "STUFF"
+	},
+	"stuff5" : {
+		"title" : "STUFF"
 	}
 }

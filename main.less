@@ -259,7 +259,7 @@ section ul{
     bottom: -11px;
     z-index: -10;
     border: 5px solid;
-    border-color: #242424 transparent transparent transparent;    
+    border-color: #0A3475 transparent transparent transparent;    
 }
 .ribbon ul::before {left: 0;}
 .ribbon ul::after {right: 0;}
@@ -278,27 +278,31 @@ section ul{
   padding-left: 0;
 }
 
-/* Projects listing */
-#projects-list ul, #projects-list ul li{
-  display: inline-block;
-}
-#projects-list a{
-  vertical-align: middle;
-  height: 100%;
-  display: block;
-}
-#projects-list ul li.link{
-  width: auto;
-}
-#projects-list h3{
-  text-align: center;
-}
-#projects-list ul li{
-  width: 80%;
-  text-align: left
-}
 .project-page img{
   display: inline-block;
   float: right;
   margin: 1%;
+}
+
+/* Drop down menu for projects */
+#drop ul{
+  position: absolute;
+  left: -99999px;
+}
+#drop:hover ul{
+  top: 1.5em;
+  left: 55%;
+  width: 20%;
+  display: block;
+}
+#drop:hover ul li{
+  width: auto;
+  display: block;
+  float: none;
+  height: 100%;
+  background: #031229;
+}
+#drop ul li:hover a{
+  background-color: #000006;
+  display: block;
 }
