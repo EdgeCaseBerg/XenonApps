@@ -82,6 +82,7 @@ nav ul{
   list-style-type: none;
   display: block;
   border-bottom: thin solid #000066;
+  z-index: 10;
 }
 nav ul li{
   width: 20%;
@@ -89,11 +90,19 @@ nav ul li{
 }
 nav ul li:hover{
 }
-nav ul li.arrow{
-  background-color: red;
+nav ul li.arrow:before{
+  content:  ' ';
+  height: 100%;
+  border-color: transparent transparent #000  transparent;
+  border-style: solid;
+  border-width: 20px;
+  position: relative;
+  top: .2em;
+  right: -2.5em ;
+  z-index: -1;
 }
+
 nav a{
-  
   text-decoration: none;
   font-weight: bold;
   font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
