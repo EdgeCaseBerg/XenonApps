@@ -1,4 +1,3 @@
-
 <div id="bio">
 	<h2>Evan Yandell</h2>
 	<p>
