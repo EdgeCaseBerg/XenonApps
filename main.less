@@ -6,10 +6,14 @@ body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+  margin: 0 auto -2em; /* the bottom margin is the negative value of the footer's height */
 }
 #footer, .push {
-  height: 155px; /* .push must be the same height as .footer */
+  height: 2em; /* .push must be the same height as .footer */
+}
+#footer p{
+  padding: 0;
+  margin: 0;
 }
 html{
   /*background: url('../images/dark_mosaic.png'); /*http://subtlepatterns.com/dark-mosaic/*/
@@ -152,12 +156,14 @@ section ul{
   width: 20%;
   margin: 5% 5% 0% 5%
 }
-#bio h2 {
-  margin: 2%;
-  color: #00f0ff;
+#bio h2{
+  margin: 5%;
+}
+#bio h2, #bio h2 a {
+  color: #55acee;
+  text-shadow: rgba(0,0,0,0.3) 0 1px 0;
 }
 #bio h2 a{
-  color: #00f0ff;
   text-decoration: none;
 }
 
