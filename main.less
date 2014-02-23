@@ -48,16 +48,19 @@ a{
 a:hover{
   color: #fff;
 }
-#content{
-  width: 80%;
-  margin-left: 10%;
+#content{  
   box-shadow: 0px 1em 1em black;
   margin-top: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
+  background-color: #222;
+}
+#content.index{
+  width: 80%;
+  margin-left: 10%;
 }
 
-nav ul{
+nav ul, #footer p{
   text-align: center;
   list-style-type: none;
   border-bottom: thin solid #000066;
@@ -186,7 +189,7 @@ section ul{
     position: relative;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
-.ribbon ul {
+.ribbon ul, .ribbon p {
     display: block;
     height: 30px;
     line-height: 1.3;
@@ -220,3 +223,16 @@ section ul{
 }
 .ribbon ul::before {left: 0;}
 .ribbon ul::after {right: 0;}
+
+.ribbon p{
+  margin-left: 0;
+}
+#footer.ribbon{
+  margin-left: 10%;
+  width: 80%;
+}
+#footer p{
+  left: 0;
+  margin-left: 0;
+  padding-left: 0;
+}
