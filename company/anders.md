@@ -3,5 +3,5 @@
 <p>
 	iOS programming extraordinaire!
 </p>
-<img src="https://identicons.github.com/9f421344d6c2a8735cce3490958aed17.png?s=250" />
+<img src="https://identicons.github.com/9f421344d6c2a8735cce3490958aed17.png" />
 </div>
