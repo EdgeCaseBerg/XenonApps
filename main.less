@@ -1,4 +1,16 @@
 /* General Background and layout */
+html, body {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+}
+#footer, .push {
+  height: 155px; /* .push must be the same height as .footer */
+}
 html{
   /*background: url('../images/dark_mosaic.png'); /*http://subtlepatterns.com/dark-mosaic/*/
   color: #ffffff; /*I need to see */
@@ -81,6 +93,8 @@ section ul{
 
 #footer{
   margin-left: 10%;
+  margin-bottom: 0;
+  padding-bottom: 0;
   clear: both;
 }
 
