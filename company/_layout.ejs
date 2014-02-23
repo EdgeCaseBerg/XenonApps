@@ -14,18 +14,18 @@
   <body>
     <%- partial("_header") %>
     <section>
-    	<div id="content">
-
-			<ul id="member-list">
-				<li class="active"><a href="index.html">Xenon Apps</a></li>
-				<li><a href="joshua.html">Joshua Dickerson</a></li>
-				<li><a href="ethan.html">Ethan Eldridge</a></li>
-				<li><a href="scott.html">Scott MacEwan</a></li>
-				<li><a href="anders.html">Anders Melen</a></li>
-				<li><a href="shelby.html">Shelby Smullen</a></li>
-				<li><a href="phelan.html">Phelan Vendeville</a></li>
-				<li><a href="evan.html">Evan Yandell</a></li>
+    	<ul id="member-list">
+				<li class="<%= current.source == "index" ? 'active' : '' %>"><a href="index.html">Xenon Apps</a></li>
+				<li class="<%= current.source == "joshua" ? 'active' : '' %>"><a href="joshua.html">Josh</a></li>
+				<li class="<%= current.source == "ethan" ? 'active' : '' %>"><a href="ethan.html">Ethan</a></li>
+				<li class="<%= current.source == "anders" ? 'active' : '' %>"><a href="anders.html">Anders</a></li>
+				<li class="<%= current.source == "shelby" ? 'active' : '' %>"><a href="shelby.html">Shelby</a></li>
+				<li class="<%= current.source == "phelan" ? 'active' : '' %>"><a href="phelan.html">Phelan</a></li>
+				<li class="<%= current.source == "evan" ? 'class="active"' : '' %>"><a href="evan.html">Evan</a></li>
 			</ul>
+    	<div id="content">
+    			<%- console.log(current) %>
+			
 		
 			<div id="profile-container">
 				<%- yield %>

@@ -89,39 +89,37 @@ section ul{
 
 /* Profiles and Company section */
 #member-list{
-  width:25%;
-  float: left;
+  display: inline-block;
   list-style-type: none;
   margin: 1em 0 1em 0;
-  background-color: black;
   margin-left: 1em;
   padding-left: 0;
+  width: 100%;
 }
-#member-list li:before{
-  text-decoration: underline;
-  padding: 1em;
-  padding-left: 0;
-  content: ">";
-}
-#member-list li{
-  padding: 1em 0 1em 20%;
-  border: 1px solid #00f0ff;
+#member-list li{  
+  width: 13%;
+  text-align: center;
   font-weight: bolder;
+  border-bottom: thin solid white;
+  border-bottom-right-radius: 1em;
+  border-bottom-left-radius: 1em;
+  display: inline-block;
   transition: opacity,background-color .5s ease-in-out;
   -moz-transition: opacity,background-color .5s ease-in-out;
     -webkit-transition: opacity,background-color .5s ease-in-out;
 } 
+#member-list li a{
+  padding: .05em;
+  display: block;
+  text-decoration: none;
+}
 #member-list li:hover{
-  background-color: #00f0ff;
+  background-color: rgba(0,94.1,100,.7);
   color: black;
   cursor: pointer;
-}
-#member-list li:hover:before{
-  content: "v";
-  color: black; 
-}
+} 
 #member-list li.active{
-  background-color: #0000ff;
+  background-color: rgba(0,94.1,100,.7);
 }
 #profile-container{
   width:70%;
