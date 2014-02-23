@@ -23,10 +23,7 @@
 				<li class="<%= current.source == "phelan" ? 'active' : '' %>"><a href="phelan.html">Phelan</a></li>
 				<li class="<%= current.source == "evan" ? 'class="active"' : '' %>"><a href="evan.html">Evan</a></li>
 			</ul>
-    	<div id="content">
-    			<%- console.log(current) %>
-			
-		
+    	<div id="content">		
 			<div id="profile-container">
 				<%- yield %>
 			</div>

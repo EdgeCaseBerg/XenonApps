@@ -122,18 +122,22 @@ section ul{
   background-color: rgba(0,94.1,100,.7);
 }
 #profile-container{
-  width:70%;
-  float: left;
+  width:100%;
   margin: 1em 0 1em 0;
 }
 #profile-container p{
-  width: 90%;
-  margin: 5% 5% 5% 5%
-}
-#profile-container img{
-  float: right;
+  display: inline-block;
   width: 50%;
   margin: 5% 5% 5% 5%
+}
+#profile-container img + p{
+  margin: 0 5% 0 5%;
+}
+#profile-container img{
+  vertical-align: top;
+  display: inline-block;
+  width: 20%;
+  margin: 5% 5% 0% 5%
 }
 #bio h2 {
   margin: 2%;
