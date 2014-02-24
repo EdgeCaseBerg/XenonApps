@@ -8,11 +8,11 @@
 				<a href="/projects/index.html">Projects</a>
 				<ul>
 				<% for(var slug in public.projects._data){ %>
-					<%if (slug != current.source) {%>
+					
 						<li>
 					  		<a href="/projects/<%= slug %>.html"><%= public.projects._data[slug].title %></a>
 					  	</li>
-					<% }; %>
+					
 				<% }; %>
 				</ul>
 			</li>
