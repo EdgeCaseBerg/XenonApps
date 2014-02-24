@@ -58,8 +58,11 @@ a{
 a:hover{
   color: #fff;
 }
+h2{
+  color: #55acee;
+}
 #content{  
-  box-shadow: 0px 1em 1em black;
+  box-shadow: 0px 0.4em .5em black;
   margin-top: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -74,9 +77,12 @@ a:hover{
   text-align: center;
 }
 nav ul{
+  height: 100%;
   text-align: center;
   list-style-type: none;
+  display: block;
   border-bottom: thin solid #000066;
+  z-index: 10;
 }
 nav ul li{
   width: 20%;
@@ -84,8 +90,19 @@ nav ul li{
 }
 nav ul li:hover{
 }
+nav ul li.arrow:before{
+  content:  ' ';
+  height: 100%;
+  border-color: transparent transparent #000  transparent;
+  border-style: solid;
+  border-width: 20px;
+  position: relative;
+  top: .2em;
+  right: -2.5em ;
+  z-index: -1;
+}
+
 nav a{
-  
   text-decoration: none;
   font-weight: bold;
   font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
@@ -98,7 +115,9 @@ section{
   margin-left: 10%;
   width: 80%;
 }
-
+section:last-child{
+  margin-bottom: 4em;
+}
 section dl dt{
   border-bottom: #00f0ff solid thick;
   font-size: 110%;
@@ -110,8 +129,6 @@ section dl dd p{
 }
 .emphasize{
   font-style: italic;
-}
-section ul{
 }
 
 #footer{
@@ -169,7 +186,7 @@ section ul{
 #profile-container p{
   display: inline-block;
   width: 50%;
-  margin: 2% 5% 5% 2%
+  margin: 2% 5% 2% 2%
 }
 #profile-container img + p{
   margin: 0 2% 0 2%;
@@ -214,7 +231,7 @@ section ul{
     height: 30px;
     line-height: 1.3;
 
-    width: 99%;
+    width: 99.6%;
     margin: 0;
     padding: 5px 10px;
     position: relative;
@@ -224,7 +241,8 @@ section ul{
     text-shadow: 0 1px 1px #111;
     border-top: 1px solid #363636;
     border-bottom: 1px solid #202020;
-    background: #000006;
+    background: #000006; /* Can't decide between these two */
+    background: #031229;
     background: linear-gradient(top, #383838 0%, #262626 100%);
     border-radius: 2px 2px 0 0;
     box-shadow: 0 1px 2px rgba(0,0,0,0.3);
@@ -239,7 +257,7 @@ section ul{
     bottom: -11px;
     z-index: -10;
     border: 5px solid;
-    border-color: #242424 transparent transparent transparent;    
+    border-color: #0A3475 transparent transparent transparent;    
 }
 .ribbon ul::before {left: 0;}
 .ribbon ul::after {right: 0;}
@@ -256,4 +274,42 @@ section ul{
   left: 0;
   margin-left: 0;
   padding-left: 0;
+}
+
+.project-page img{
+  display: inline-block;
+  float: right;
+  margin: 1%;
+}
+
+/* Drop down menu for projects */
+#drop ul{
+  position: absolute;
+  left: -99999px;
+}
+#drop:hover ul{
+  top: 0em;
+  left: 49%;
+  width: 20%;
+  display: block;
+}
+#drop:hover ul li{
+  width: auto;
+  display: block;
+  float: none;
+  height: 100%;
+  background: #031229;
+  box-shadow: .0em .25em 0 #0A3475;
+}
+#drop:hover ul li:hover{
+  background-color: black;
+  border: solid;
+  border-color: transparent #fff transparent #fff;
+}
+#drop ul li:hover a{
+  background-color: #000006;
+  display: block;
+  background: linear-gradient(top, #383838 0%, #262626 100%);
+    border-radius: 2px 2px 0 0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }

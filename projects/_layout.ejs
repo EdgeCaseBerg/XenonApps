@@ -24,32 +24,9 @@
 	</head>
 
 	<body>
-		<header>
-			<h1><a href="/index.html"><img id="logo" src="/images/xenonweb.png" alt="Xenon Apps website logo image"/></a></h1>
-			<nav class="ribbon">
-				<ul>
-					<li><a href="/index.html">Home</a></li>
-					<li><a href="/company/">Company</a></li>
-					<li><a href="index.html">Projects</a></li>
-					<li><a href="/contact.html">Contact Us</a></li>
-				</ul>
-			</nav>
-		</header>
-		<div id="content" class="index">
+		<%- partial('../_header.ejs') %>
+		<div id="content" class="index project-page">
 			<%- yield %>
-			<section>
-				<h2>Projects</h2>
-				<% for(var slug in public.projects._data){ %>
-					<%if (slug != current.source) {%>
-					<div class="project-block">
-				  		<h3><a href="/projects/<%= slug %>.html"><%= public.projects._data[slug].title %></a></h3>
-				  		<p>
-				  			<%= public.projects._data[slug].description %>
-				  		</p>
-				  	</div>
-				  	<% }; %>
-				<% }; %>
-			</section>
 		</div>	
 		<%- partial("../_footer.ejs") %>
 	</body>
