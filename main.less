@@ -301,6 +301,12 @@ section ul{
   float: none;
   height: 100%;
   background: #031229;
+  box-shadow: .0em .25em 0 #0A3475;
+}
+#drop:hover ul li:hover{
+  background-color: black;
+  border: solid;
+  border-color: transparent #fff transparent #fff;
 }
 #drop ul li:hover a{
   background-color: #000006;
@@ -310,16 +316,3 @@ section ul{
     box-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 /* Deal with the ribbon somewhat */
-#drop ul li a:hover:before,
-#drop ul li a:hover:after{
-  content: '';
-  display: block;
-  width: 0;
-  height: 0;
-  position: absolute;
-  bottom: -11px;
-  border: 5px solid;
-  border-color: #0A3475 transparent transparent transparent;    
-}
-#drop ul li a:hover:before {left: 0;}
-#drop ul li a:hover:after {right: 0;}
