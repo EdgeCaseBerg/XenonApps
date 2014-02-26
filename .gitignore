@@ -1,3 +1,0 @@
-#Git ignore file. Ignore ALL apache log files as we really don't need to be tracking those.
-error.log
-access.log
