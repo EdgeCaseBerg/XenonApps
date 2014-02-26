@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/main.css' />
+    <script src="/app.js"></script>
+    <meta name="description" content="<%= description %>" />
+    <META name="keywords" content="Xenon Apps, xenon, website"> <!-- Add more keywords as we create pages (Names for profiles)-->
+    <meta name="robots" content="index, follow" >
+    <meta name="revisit-after" content="1 month">
+    <meta name="author" content="Ethan Eldridge, Shelby Smullen, Joshua Dickerson">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/ico">
+    <link rel="icon" href="/images/favicon.ico" type="image/ico">
+  </head>
+  <body>
+    <%- partial("_header") %>
+    <div id="content" class="index">
+    <%- yield %>
+    </div>
+    <%- partial("_footer.ejs") %>
+  </body>
+</html>

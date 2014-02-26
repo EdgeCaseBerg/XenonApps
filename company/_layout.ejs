@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/main.css' />
+    <script src="/app.js"></script>
+    <meta name="description" content="<%= description %>" />
+    <meta name="robots" content="index, follow" >
+	<meta name="revisit-after" content="1 month">
+	<meta name="author" content="Ethan Eldridge, Scott MacEwan, Shelby Smullen, Joshua Dickerson">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/jpgico">
+	<link rel="icon" href="/images/favicon.ico" type="image/ico">
+  </head>
+  <body>
+    <%- partial("../_header") %>
+    <section>
+    	<div id="content">		
+        <ul id="member-list">
+          <li class="<%= current.source == "index" ? 'active' : '' %>"><a href="index.html">Xenon Apps</a></li>
+          <li class="<%= current.source == "joshua" ? 'active' : '' %>"><a href="joshua.html">Josh</a></li>
+          <li class="<%= current.source == "ethan" ? 'active' : '' %>"><a href="ethan.html">Ethan</a></li>
+          <li class="<%= current.source == "anders" ? 'active' : '' %>"><a href="anders.html">Anders</a></li>
+          <li class="<%= current.source == "shelby" ? 'active' : '' %>"><a href="shelby.html">Shelby</a></li>
+          <li class="<%= current.source == "phelan" ? 'active' : '' %>"><a href="phelan.html">Phelan</a></li>
+          <li class="<%= current.source == "evan" ? 'active' : '' %>"><a href="evan.html">Evan</a></li>
+        </ul>
+  			<div id="profile-container">
+  				<%- yield %>
+  			</div>
+		</div>
+	</section>
+    <%- partial("../_footer.ejs") %>
+  </body>
+</html>
