@@ -1,9 +1,0 @@
-html{
-	background: url('../images/dark_mosaic.png'); /*http://subtlepatterns.com/dark-mosaic/*/
-	color: #ffffff; /*I need to see */
-}
-#logo{ /*It may be wise to have multiple image sizes instead of just setting the logo? not sure*/
-	width:10%;
-	margin-left: 10%;
-}
-		
