@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  	<title><%= title %></title>
+	    <link rel='stylesheet' href='/main.css' />
+	    <script src="/app.js"></script>
+	    <meta name="description" content="<%= description %>" />
+	    <meta name="robots" content="index, follow" >
+		<meta name="revisit-after" content="1 month">
+		<meta name="author" content="Ethan Eldridge, Scott MacEwan, Shelby Smullen, Joshua Dickerson">
+		<link rel="shortcut icon" href="/images/favicon.ico" type="image/ico">
+		<link rel="icon" href="/images/favicon.ico" type="image/ico">
+	  	<!-- Meta information for Search Engines and site description -->
+	  	<META name="description" content=>
+	  	<META name="keywords" content="Xenon Apps, xenon, website, projects">
+	  	<style type="text/css">
+	  	.project-block{
+	  		margin-left: 5%;
+	  	}
+	  	.project-block p{
+	  		margin-left: 0%;
+	  	}
+	  	</style>
+	</head>
+
+	<body>
+		<%- partial('../_header.ejs') %>
+		<div id="content" class="index project-page">
+			<%- yield %>
+		</div>	
+		<%- partial("../_footer.ejs") %>
+	</body>
+</html>
