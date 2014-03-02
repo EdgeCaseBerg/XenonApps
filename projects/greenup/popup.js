@@ -33,10 +33,7 @@ nm.ui.InlinePopup = function(){
 // open popup – takes a click event as an argument
 nm.ui.InlinePopup.prototype.goPopup = function( e ){
 	// make this event available in the namespace
-	// this.currVar = e;
-	// console.log(this.currVar);
-	// console.log(this.currVar.target);
-	// console.log(this.domh.getNextElementSibling(this.currVar.target));
+	this.currVar = e;
 
 	// dont follow the link
 	e.preventDefault();// add link href as image to load
@@ -59,13 +56,17 @@ nm.ui.InlinePopup.prototype.switchPicture = function( e ){
 	if (e.keyCode == 39){
 		if (goog.dom.getElement('header').style.display == 'none'){
 			console.log("got to right arrow");
-			// console.log(this);
 			// current thumbnail that was clicked
+			console.log(this.currVar.currentTarget.id);
 			// next sibling (to the right) of that thumbnail
+			var fkBtn = document.getElementById(this.currVar.currentTarget.id);
+			goog.events.listen( fkBtn , goog.events.EventType.CLICK , this.goPopup , false , this );
+			fkBtn.onclick;
 			// simulate a click on that thumbnail
 
 			// create an artificial loader and call
 			this.goPopup(this.currVar);
+
 			// document.getElementById("item1").previousSibling.id;
 		}
 	}
@@ -104,7 +105,8 @@ nm.ui.InlinePopup.prototype.imageLoaded = function( e ){
 nm.ui.InlinePopup.prototype.bindToClass = function( c ){ 
 	var es = this.domh.getElementsByTagNameAndClass( '*' , c );
 	// listen for CLICK Event on every object in the NodeList
-	for( i in es ) if( typeof es[ i ] == 'object' )
+	for( i in es ) if( typeof es[ i ] == 'object' ){
 		goog.events.listen( es[ i ] , goog.events.EventType.CLICK , this.goPopup , false , this );
+	}
 };
 
