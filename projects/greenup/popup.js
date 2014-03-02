@@ -13,6 +13,7 @@ nm.ui.InlinePopup = function(){
 	this.dia = new goog.ui.Dialog( 'inlinepopup' , true );
 	this.loader = new goog.net.ImageLoader();
 	this.domh = new goog.dom.DomHelper();
+	this.docKh = new goog.events.KeyHandler(document);
 
 	// setup objects
 	this.dia.setVisible( false );
@@ -23,10 +24,8 @@ nm.ui.InlinePopup = function(){
 	// event listeners
 	goog.events.listen( this.dia.getBackgroundElement() ,  goog.events.EventType.CLICK , this.closePopup , false , this );
 	goog.events.listen( this.loader , goog.events.EventType.LOAD , this.imageLoaded , false , this );
+	goog.events.listen( this.docKh , 'key' , this.switchPicture , false , this );
 };
-
-// TODO: GET HEADER AND FOOTER AND MAKE THEM INVISIBLE WHEN THE POPUP IS ON, AND MAKE THEN VISIBLE WHEN THE POPUP IS OFF
-// ALSO, CATCH ARROW CLICKS AND SCROLL THROUGH THE IMAGES
 
 
 // open popup – takes a click event as an argument
@@ -48,6 +47,25 @@ nm.ui.InlinePopup.prototype.goPopup = function( e ){
 };
 
 
+nm.ui.InlinePopup.prototype.switchPicture = function( e ){
+	// TODO: implement picture switching by keypress
+	console.log(this);
+	if (e.keyCode == 39){
+		if (goog.dom.getElement('header').style.display == 'none'){
+			console.log("got to right arrow");
+			this.imageLoaded(this.loader);
+			// document.getElementById("item1").previousSibling.id;
+		}
+	}
+	if (e.keyCode == 37){
+		if (goog.dom.getElement('header').style.display == 'none'){
+			console.log("got to left arrow");
+			// document.getElementById("item1").previousSibling.id;
+		}
+	}
+}
+
+
 // close popup – takes a click event as an argument
 nm.ui.InlinePopup.prototype.closePopup = function( e ){ 
 	this.dia.setVisible( false );
@@ -55,6 +73,8 @@ nm.ui.InlinePopup.prototype.closePopup = function( e ){
 	// show header and footer
 	goog.dom.getElement('header').style.display = 'block';
 	goog.dom.getElement('footer').style.display = 'block';
+
+	goog.events.unlisten(this.docKh, 'key');
 };
 
 
@@ -73,6 +93,6 @@ nm.ui.InlinePopup.prototype.bindToClass = function( c ){
 	var es = this.domh.getElementsByTagNameAndClass( '*' , c );
 	// listen for CLICK Event on every object in the NodeList
 	for( i in es ) if( typeof es[ i ] == 'object' )
-	goog.events.listen( es[ i ] , goog.events.EventType.CLICK , this.goPopup , false , this );
+		goog.events.listen( es[ i ] , goog.events.EventType.CLICK , this.goPopup , false , this );
 };
 
