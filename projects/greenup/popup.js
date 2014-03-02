@@ -25,11 +25,19 @@ nm.ui.InlinePopup = function(){
 	goog.events.listen( this.dia.getBackgroundElement() ,  goog.events.EventType.CLICK , this.closePopup , false , this );
 	goog.events.listen( this.loader , goog.events.EventType.LOAD , this.imageLoaded , false , this );
 	goog.events.listen( this.docKh , 'key' , this.switchPicture , false , this );
+
+	this.currVar = '';
 };
 
 
 // open popup – takes a click event as an argument
 nm.ui.InlinePopup.prototype.goPopup = function( e ){
+	// make this event available in the namespace
+	// this.currVar = e;
+	// console.log(this.currVar);
+	// console.log(this.currVar.target);
+	// console.log(this.domh.getNextElementSibling(this.currVar.target));
+
 	// dont follow the link
 	e.preventDefault();// add link href as image to load
 	this.loader.addImage( 'previewimg' , e.currentTarget.href );
@@ -48,12 +56,16 @@ nm.ui.InlinePopup.prototype.goPopup = function( e ){
 
 
 nm.ui.InlinePopup.prototype.switchPicture = function( e ){
-	// TODO: implement picture switching by keypress
-	console.log(this);
 	if (e.keyCode == 39){
 		if (goog.dom.getElement('header').style.display == 'none'){
 			console.log("got to right arrow");
-			this.imageLoaded(this.loader);
+			// console.log(this);
+			// current thumbnail that was clicked
+			// next sibling (to the right) of that thumbnail
+			// simulate a click on that thumbnail
+
+			// create an artificial loader and call
+			this.goPopup(this.currVar);
 			// document.getElementById("item1").previousSibling.id;
 		}
 	}
