@@ -194,12 +194,29 @@ section dl dd p{
 #profile-container img{
   vertical-align: top;
   display: inline-block;
-  
   float: right;
   margin-right: 18%;
   padding-bottom: 2em;
-  width: 250px;
-  height: 250px;
+  max-height: 250px;
+  max-width: 250px;
+}
+/* Let the profile image slide a bit for smaller screens */
+@media screen and (max-width: 1200px){
+  #profile-container img{
+    width: 25%;
+  }
+}
+/* pop the profile image to the left and let the text go around it */
+@media screen and (max-width: 960px){
+ #profile-container img{
+    width: 250px;
+    float: none;
+    margin-right: auto;
+    margin-left: 2%;
+  } 
+  #profile-container p + p{
+    width: 80%;
+  }
 }
 #bio{
   min-height: 350px;
