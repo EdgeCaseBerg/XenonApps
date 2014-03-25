@@ -38,4 +38,35 @@ the volunteers have been given their bags.
 		to locations needing more help, as well as to moderate the forum
 		feed for any offensive commentary. 
 	</p>
+<script src="greenup/popup.js"></script>
+
+<div id='greenup_pic_container' class='sliderContainer'>
+	<div>
+		<a id="s0" href="greenup/images/home.png"; class="inlinepopup-trigger" title="Home Screen">
+			<img class="thumb" src="greenup/images/home.png" alt="home"/>
+		</a>
+	</div>
+
+	<div>
+		<a id="s1" href="greenup/images/mapHeatMapAndMarkers.png"; class="inlinepopup-trigger" title="Heatmap and Markers">
+			<img class="thumb" src="greenup/images/mapHeatMapAndMarkers.png" alt="heatmap"/>
+		</a>
+	</div>
+
+	<div>
+		<a id="s2" href="greenup/images/mapWithMenu.png"; class="inlinepopup-trigger" title="Map with Menu">
+			<img class="thumb" src="greenup/images/mapWithMenu.png" alt="heatmap"/>
+		</a>
+	</div>	
+
+	<div>
+		<a id="s3" href="greenup/images/mapWithSpinnerView.png"; class="inlinepopup-trigger" title="Map with Spinner">
+			<img class="thumb" src="greenup/images/mapWithSpinnerView.png" alt="heatmap"/>
+		</a>
+	</div>	
+</div>
+<script>
+	var popup = new nm.ui.InlinePopup();
+	popup.bindToClass( 'inlinepopup-trigger' );
+</script>
 </section>

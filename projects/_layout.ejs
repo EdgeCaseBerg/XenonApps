@@ -4,6 +4,13 @@
 	  	<title><%= title %></title>
 	    <link rel='stylesheet' href='/main.css' />
 	    <script src="/app.js"></script>
+		<script src="/closure-library/closure/goog/base.js"></script>
+		  <script>
+		    goog.require('goog.dom');
+		    goog.require('goog.ui.Component');
+		    goog.require('goog.ui.Slider');
+		    goog.require('goog.fx.easing');
+		  </script>
 	    <meta name="description" content="<%= description %>" />
 	    <meta name="robots" content="index, follow" >
 		<meta name="revisit-after" content="1 month">
@@ -27,7 +34,7 @@
 		<%- partial('../_header.ejs') %>
 		<div id="content" class="index project-page">
 			<%- yield %>
-		</div>	
+		</div>
 		<%- partial("../_footer.ejs") %>
 	</body>
 </html>
