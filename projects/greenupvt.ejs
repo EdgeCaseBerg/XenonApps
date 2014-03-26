@@ -1,6 +1,6 @@
 <section>	
 	<h2>Green Up Vermont</h2>
-	<img src="/images/greenup-152.png" />
+	<img id="greenuplogo" src="/images/greenup/greenup-152.png" />
 	<p>
 		Each year the State of Vermont holds "Green-up" events
 where volunteers spend part of a spring day cleaning up litter and other
@@ -38,35 +38,14 @@ the volunteers have been given their bags.
 		to locations needing more help, as well as to moderate the forum
 		feed for any offensive commentary. 
 	</p>
-<script src="greenup/popup.js"></script>
 
-<div id='greenup_pic_container' class='sliderContainer'>
-	<div>
-		<a id="s0" href="greenup/images/home.png"; class="inlinepopup-trigger" title="Home Screen">
-			<img class="thumb" src="greenup/images/home.png" alt="home"/>
-		</a>
+	<div class="slideshow">
+	  <ul>
+	    <li><a href="#one">Image One</a><img class="thumb" id="one" src="/images/greenup/home.png" alt="home"/></li>
+	    <li><a href="#two">Image Two</a><img class="thumb" id="two" src="/images/greenup/mapHeatMapAndMarkers.png" alt="heatmap"/></li>
+	    <li><a href="#three">Image Three</a><img class="thumb" id="three" src="/images/greenup/mapWithMenu.png" alt="heatmap"/> </li>
+	    <li><a href="#four">Image Four</a><img class="thumb" id="four" src="/images/greenup/mapWithSpinnerView.png" alt="heatmap"/> </li>
+	  </ul>
 	</div>
 
-	<div>
-		<a id="s1" href="greenup/images/mapHeatMapAndMarkers.png"; class="inlinepopup-trigger" title="Heatmap and Markers">
-			<img class="thumb" src="greenup/images/mapHeatMapAndMarkers.png" alt="heatmap"/>
-		</a>
-	</div>
-
-	<div>
-		<a id="s2" href="greenup/images/mapWithMenu.png"; class="inlinepopup-trigger" title="Map with Menu">
-			<img class="thumb" src="greenup/images/mapWithMenu.png" alt="heatmap"/>
-		</a>
-	</div>	
-
-	<div>
-		<a id="s3" href="greenup/images/mapWithSpinnerView.png"; class="inlinepopup-trigger" title="Map with Spinner">
-			<img class="thumb" src="greenup/images/mapWithSpinnerView.png" alt="heatmap"/>
-		</a>
-	</div>	
-</div>
-<script>
-	var popup = new nm.ui.InlinePopup();
-	popup.bindToClass( 'inlinepopup-trigger' );
-</script>
 </section>

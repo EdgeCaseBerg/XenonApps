@@ -22,6 +22,7 @@ header{
   height: 70px;
   min-height: 70px;
   width: 100%;
+  z-index: 10;
 }
 #logo{
   height: 50px;
@@ -33,7 +34,7 @@ header p{
   display: inline-block;
   margin-left: 10px;
 }
-#abovefold, #companyFold{
+#abovefold, #companyFold, #projectsFold{
   padding: 10px 10% 10px 10%;
   padding-bottom: 15%;
 }
@@ -41,9 +42,12 @@ header p{
 #abovefold{
   padding-top: 80px;
 }
+#projectsFold{
+  padding-bottom: 0%;
+}
 section{
 }
-section h2{
+section h2:first-of-type {
   text-align: center;
   font-size: 26pt;
   padding: 10px 0 10px 0;
@@ -57,7 +61,7 @@ section ul{
 .bio img{
   width: @profileImageSize;
   height: @profileImageSize; 
-  margin: 5px;
+  margin: 10px;
 }
 .bio:nth-of-type(even) img{
   float: left;
@@ -70,4 +74,62 @@ section ul{
 }
 .bio p{
   padding-bottom: 10px;
+}
+.bio h2:first-of-type, .project h2:first-of-type{ /* need first of type to override section h2 pseudo */
+  font-size: 16pt;
+}
+#greenuplogo{
+  float: left;
+  margin: 10px;
+}
+footer{
+  text-align: center;
+}
+
+/* Green Up Slider for images */
+#projectsFold .slideshow {
+    margin: 50px auto;
+    position: relative;
+    width: 400px;
+    min-height: 420px;
+}
+.slideshow ul {
+  list-style: none;
+}
+.slideshow li {
+    margin: 0 0 0 250px;
+}
+.slideshow li a { 
+    color: #222;
+    text-decoration: none;
+    font: 15px/1 Helvetica, sans-serif;
+    -webkit-transition: color 0.5s ease;
+       -moz-transition: color 0.5s ease;
+         -o-transition: color 0.5s ease;
+        -ms-transition: color 0.5s ease;
+            transition: color 0.5s ease;
+}
+ 
+.slideshow li a:hover {
+    color: #50b0df;
+}
+.slideshow li img {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  max-height: 400px;
+  padding: 10px 0 10px 0;
+  z-index: -1;
+  vertical-align: bottom;
+  -webkit-transition: opacity 1s ease-in-out;
+     -moz-transition: opacity 1s ease-in-out;
+       -o-transition: opacity 1s ease-in-out;
+      -ms-transition: opacity 1s ease-in-out;
+          transition: opacity 1s ease-in-out;
+}
+.slideshow li img:target {
+    z-index: 1;
+}
+.slideshow li img:not(:target) {
+    opacity: 0;
 }
