@@ -14,8 +14,11 @@
   </head>
   <body>
     <%- partial("_header") %>
-    <div id="content" class="index">
+    <div id="abovefold" class="index">
     <%- yield %>
+    </div>
+    <div id="companyFold">
+      <%- partial("/company/index.ejs") %>
     </div>
     <%- partial("_footer.ejs") %>
   </body>
