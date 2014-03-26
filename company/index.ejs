@@ -7,7 +7,8 @@
 		Our company's strength is without a doubt its people.
 	</p>
 	<% for(var slug in public.company._data){ %>
-		<%- partial(slug) %>				
+		<div class="bio">
+			<%- partial(slug) %>				
+		</div>
 	<% }; %>
-	
 </section>

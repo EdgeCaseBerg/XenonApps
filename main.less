@@ -1,13 +1,12 @@
 @backgroundColor: #efefef;
+@profileImageSize: 150px;
 
 /* General Background and layout */
 *{
   padding: 0;
   margin: 0;
 }
-div{
-  border: black thin solid;
-}
+
 html{
   /*background: url('../images/dark_mosaic.png'); /*http://subtlepatterns.com/dark-mosaic/*/
   font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
@@ -54,5 +53,21 @@ section ul{
   margin-left: 20px;
 }
 #companyFold{
-
+}
+.bio img{
+  width: @profileImageSize;
+  height: @profileImageSize; 
+  margin: 5px;
+}
+.bio img:nth-child(even){
+  float: left;
+}
+.bio img:nth-child(odd){
+  float: right;
+}
+.bio{
+  clear: both;
+}
+.bio p{
+  padding-bottom: 10px;
 }
