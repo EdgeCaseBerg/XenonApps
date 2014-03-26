@@ -1,13 +1,19 @@
 @backgroundColor: #efefef;
 @profileImageSize: 150px;
 
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-Regular.ttf');
+}
+
 /* General Background and layout */
 *{
   padding: 0;
   margin: 0;
 }
 html{
-  font: helvetica,arial,freesans,clean,sans-serif;color:black;line-height:1.4em;background-color:#F8F8F8;
+  /* font: helvetica,arial,freesans,clean,sans-serif;color:black;line-height:1.4em;background-color:#F8F8F8; */
+  font-family: 'Open Sans', sans-serif; 
   padding: 0;
   margin: 0;
 }
@@ -39,6 +45,8 @@ header p{
 /* for pushing below the header */
 #abovefold{
   padding-top: 80px;
+  background-image: linear-gradient(45deg, #362d6c 0%,#0c5593 100%);
+  color: #ccc;
 }
 #projectsFold{
   padding-bottom: 0%;
@@ -55,7 +63,19 @@ section ul{
   margin-left: 20px;
 }
 #companyFold{
+  background: #1d1d1d;
+  color: #ccc;
 }
+
+#contactFold{
+  background: #303030;
+  color: #ccc;
+}
+
+a{
+  color: #55acee;
+}
+
 .bio img{
   width: @profileImageSize;
   height: @profileImageSize; 
