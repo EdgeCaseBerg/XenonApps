@@ -1,5 +1,11 @@
 @backgroundColor: #efefef;
 @profileImageSize: 150px;
+@linkColor: #55acee;
+@fontColor: #ccc;
+@companyFoldBack: #303030;
+@contactFoldBack: #1d1d1d;
+@projectsFoldBack: #000000;
+
 
 @font-face {
   font-family: 'Open Sans';
@@ -45,8 +51,24 @@ header p{
 /* for pushing below the header */
 #abovefold{
   padding-top: 80px;
-  background-image: linear-gradient(45deg, #362d6c 0%,#0c5593 100%);
   color: #ccc;
+/* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(top left, #280140 0%, #551A7F 300%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top left, #280140 0%, #551A7F 300%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(top left, #280140 0%, #551A7F 300%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #280140), color-stop(3, #551A7F));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top left, #280140 0%, #551A7F 300%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to bottom right, #280140 0%, #551A7F 300%);
 }
 #projectsFold{
   padding-bottom: 0%;
@@ -63,22 +85,33 @@ section ul{
   margin-left: 20px;
 }
 #companyFold{
-  background: #1d1d1d;
-  color: #ccc;
+  background: @companyFoldBack;
+  color: @fontColor;
 }
 
 #contactFold{
-  background: #303030;
-  color: #ccc;
+  background: @contactFoldBack;
+  color: @fontColor;
+}
+
+#projectsFold{
+  background: @projectsFoldBack;
+  color: @fontColor;
 }
 
 a{
-  color: #55acee;
+  color: @linkColor;
 }
 
 .bio img{
   width: @profileImageSize;
-  height: @profileImageSize; 
+  height: @profileImageSize;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8); 
   margin: 10px;
 }
 .bio:nth-of-type(even) img{
@@ -90,6 +123,8 @@ a{
 .bio{
   clear: both;
 }
+
+
 .bio p{
   padding-bottom: 10px;
 }
