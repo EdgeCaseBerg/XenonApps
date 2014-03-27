@@ -5,6 +5,8 @@
 @companyFoldBack: #303030;
 @contactFoldBack: #1d1d1d;
 @projectsFoldBack: #080808;
+@aboveFoldBackStart: #333E40; /*#0D0040;*/
+@aboveFoldBackEnd: #333E40;
 
 
 @font-face {
@@ -53,22 +55,22 @@ header p{
   padding-top: 80px;
     color: #ccc;
   /* IE10 Consumer Preview */ 
-  background-image: -ms-linear-gradient(bottom left, #0D0040 0%, #330E40 100%);
+  background-image: -ms-linear-gradient(bottom left, @aboveFoldBackStart 0%, @aboveFoldBackEnd 100%);
 
   /* Mozilla Firefox */ 
-  background-image: -moz-linear-gradient(bottom left, #0D0040 0%, #330E40 100%);
+  background-image: -moz-linear-gradient(bottom left, @aboveFoldBackStart 0%, @aboveFoldBackEnd 100%);
 
   /* Opera */ 
-  background-image: -o-linear-gradient(bottom left, #0D0040 0%, #330E40 100%);
+  background-image: -o-linear-gradient(bottom left, @aboveFoldBackStart 0%, @aboveFoldBackEnd 100%);
 
   /* Webkit (Safari/Chrome 10) */ 
-  background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0, #0D0040), color-stop(1, #330E40));
+  background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0, @aboveFoldBackStart), color-stop(1, @aboveFoldBackEnd));
 
   /* Webkit (Chrome 11+) */ 
-  background-image: -webkit-linear-gradient(bottom left, #0D0040 0%, #330E40 100%);
+  background-image: -webkit-linear-gradient(bottom left, @aboveFoldBackStart 0%, @aboveFoldBackEnd 100%);
 
   /* W3C Markup, IE10 Release Preview */ 
-  background-image: linear-gradient(to top right, #0D0040 0%, #330E40 100%);
+  background-image: linear-gradient(to top right, @aboveFoldBackStart 0%, @aboveFoldBackEnd 100%);
 }
 #projectsFold{
   padding-bottom: 0%;
