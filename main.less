@@ -1,4 +1,4 @@
-@backgroundColor: #efefef;
+@backgroundColor: #333;
 @profileImageSize: 150px;
 @linkColor: #55acee;
 @fontColor: #ccc;
@@ -27,14 +27,17 @@ html{
 }
 body{
 }
+
 header{
   background-color: @backgroundColor;
+  color: @fontColor;
   padding: 10px 2% 5px 2%;
   position: fixed;
   height: 70px;
   min-height: 70px;
   width: 100%;
-  z-index: 10;
+  z-index: 10; 
+  border-top: 5px solid #558E65;
 }
 #logo{
   height: 50px;
@@ -53,7 +56,7 @@ header p{
 /* for pushing below the header */
 #abovefold{
   padding-top: 80px;
-  color: #ccc;
+  color: @fontColor;
 
   /* Note: This gradient may render differently in browsers that don't support the unprefixed gradient syntax */
 
