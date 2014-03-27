@@ -1,5 +1,5 @@
 <h2><a href="http://scperkins.github.io">Sean Perkins</a></h2>
-<img src="https://avatars1.githubusercontent.com/u/2635358?s=250" />
+<img src="//avatars1.githubusercontent.com/u/2635358?s=250" />
 <p>
 	Sean started early in the world of Computer Science, creating a home-grown
 	[BCI] in High School and honing his skills by creating tools for places like
