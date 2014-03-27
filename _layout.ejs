@@ -4,6 +4,7 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/main.css' />
     <script src="/app.js"></script>
+    
     <meta name="description" content="<%= description %>" />
     <META name="keywords" content="Xenon Apps, xenon, website"> <!-- Add more keywords as we create pages (Names for profiles)-->
     <meta name="robots" content="index, follow" >
@@ -14,8 +15,17 @@
   </head>
   <body>
     <%- partial("_header") %>
-    <div id="content" class="index">
+    <div id="abovefold" class="index">
     <%- yield %>
+    </div>
+    <div id="companyFold">
+      <%- partial("/company/index.ejs") %>
+    </div>
+    <div id="contactFold">
+      <%- partial("contact.ejs") %>
+    </div>
+    <div id="projectsFold">
+      <%- partial("/projects/index.ejs") %>
     </div>
     <%- partial("_footer.ejs") %>
   </body>
