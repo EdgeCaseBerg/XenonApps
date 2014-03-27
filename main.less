@@ -1,5 +1,16 @@
 @backgroundColor: #efefef;
 @profileImageSize: 150px;
+@linkColor: #55acee;
+@fontColor: #ccc;
+@companyFoldBack: #303030;
+@contactFoldBack: #1d1d1d;
+@projectsFoldBack: #080808;
+
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-Regular.ttf');
+}
 
 /* General Background and layout */
 *{
@@ -7,7 +18,8 @@
   margin: 0;
 }
 html{
-  font: helvetica,arial,freesans,clean,sans-serif;color:black;line-height:1.4em;background-color:#F8F8F8;
+  /* font: helvetica,arial,freesans,clean,sans-serif;color:black;line-height:1.4em;background-color:#F8F8F8; */
+  font-family: 'Open Sans', Tahoma, Verdana, Segoe, sans-serif; 
   padding: 0;
   margin: 0;
 }
@@ -39,6 +51,24 @@ header p{
 /* for pushing below the header */
 #abovefold{
   padding-top: 80px;
+    color: #ccc;
+  /* IE10 Consumer Preview */ 
+  background-image: -ms-linear-gradient(bottom left, #0D0040 0%, #330E40 100%);
+
+  /* Mozilla Firefox */ 
+  background-image: -moz-linear-gradient(bottom left, #0D0040 0%, #330E40 100%);
+
+  /* Opera */ 
+  background-image: -o-linear-gradient(bottom left, #0D0040 0%, #330E40 100%);
+
+  /* Webkit (Safari/Chrome 10) */ 
+  background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0, #0D0040), color-stop(1, #330E40));
+
+  /* Webkit (Chrome 11+) */ 
+  background-image: -webkit-linear-gradient(bottom left, #0D0040 0%, #330E40 100%);
+
+  /* W3C Markup, IE10 Release Preview */ 
+  background-image: linear-gradient(to top right, #0D0040 0%, #330E40 100%);
 }
 #projectsFold{
   padding-bottom: 0%;
@@ -55,10 +85,33 @@ section ul{
   margin-left: 20px;
 }
 #companyFold{
+  background: @companyFoldBack;
+  color: @fontColor;
 }
+
+#contactFold{
+  background: @contactFoldBack;
+  color: @fontColor;
+}
+
+#projectsFold{
+  background: @projectsFoldBack;
+  color: @fontColor;
+}
+
+a{
+  color: @linkColor;
+}
+
 .bio img{
   width: @profileImageSize;
-  height: @profileImageSize; 
+  height: @profileImageSize;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8); 
   margin: 10px;
 }
 .bio:nth-of-type(even) img{
@@ -70,6 +123,8 @@ section ul{
 .bio{
   clear: both;
 }
+
+
 .bio p{
   padding-bottom: 10px;
 }
