@@ -53,6 +53,7 @@ header p{
   padding: 10px 10% 10px 10%;
   padding-bottom: 15%;
 }
+
 /* for pushing below the header */
 #abovefold{
   padding-top: 80px;
@@ -82,11 +83,17 @@ header p{
 #projectsFold{
   padding-bottom: 0%;
 }
-section{
+section h1:first-of-type{
+  text-align: center;
+  font-size: 4rem;
+  line-height: 1.5;
+  font-weight: 300;
+  padding: 10px 0 10px 0;
 }
 section h2:first-of-type {
   text-align: center;
-  font-size: 26pt;
+  font-size: 3.2em;
+  font-weight: 200;
   padding: 10px 0 10px 0;
 }
 section ul{
@@ -112,7 +119,9 @@ section ul{
 }
 a{
   color: @linkColor;
+  text-decoration: none;
 }
+
 .bio img{
   width: @profileImageSize;
   height: @profileImageSize;
@@ -201,4 +210,9 @@ footer{
 }
 .slideshow li img:not(:target) {
     opacity: 0;
+}
+
+footer{
+  background: @projectsFoldBack;
+  color: @fontColor;
 }
