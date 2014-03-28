@@ -37,8 +37,8 @@ header{
   min-height: 70px;
   width: 100%;
   z-index: 10; 
-  border-top: 5px solid #558E65;
   opacity: .97;
+
 }
 #logo{
   height: 50px;
@@ -81,6 +81,12 @@ header p{
   background-image: linear-gradient(to top left, #D99451 0%, #8F3848 1%, #558E65 1%, #13093D 90%, #050827 100%);
 }
 
+#abovefold p:first-of-type{
+  padding-top: 2em;
+  padding-bottom: 1em;
+  font-size: 2em;
+}
+
 #projectsFold{
   padding-bottom: 0%;
 }
@@ -91,6 +97,7 @@ section h1:first-of-type{
   font-weight: 300;
   padding: 10px 0 10px 0;
 }
+
 section h2:first-of-type {
   text-align: center;
   font-size: 3.2em;
@@ -100,10 +107,28 @@ section h2:first-of-type {
 section ul{
   padding: 10px 0 10px 0;
   margin-left: 20px;
+  font-size: 1.2em;
 }
 #companyFold{
   background: @companyFoldBack;
   color: @fontColor;
+  /* IE10 Consumer Preview */ 
+  background-image: -ms-linear-gradient(top right, #D99451 0%, #8F3848 1%, #558E65 1%, #13093D 90%, #050827 100%);
+
+  /* Mozilla Firefox */ 
+  background-image: -moz-linear-gradient(top right, #D99451 0%, #8F3848 1%, #558E65 1%, #13093D 90%, #050827 100%);
+
+  /* Opera */ 
+  background-image: -o-linear-gradient(top right, #D99451 0%, #8F3848 1%, #558E65 1%, #13093D 90%, #050827 100%);
+
+  /* Webkit (Safari/Chrome 10) */ 
+  background-image: -webkit-gradient(linear, right top, left bottom, color-stop(0, #D99451), color-stop(.01, #8F3848), color-stop(.01, #558E65), color-stop(.9, #13093D), color-stop(1, #050827));
+
+  /* Webkit (Chrome 11+) */ 
+  background-image: -webkit-linear-gradient(top right, #D99451 0%, #8F3848 1%, #558E65 1%, #13093D 90%, #050827 100%);
+
+  /* W3C Markup, IE10 Release Preview */ 
+  background-image: linear-gradient(to bottom left, #D99451 0%, #8F3848 1%, #558E65 1%, #13093D 90%, #050827 100%);
 }
 
 #contactFold{
@@ -157,6 +182,8 @@ a{
 }
 footer{
   text-align: center;
+  background: @projectsFoldBack;
+  color: @fontColor;
 }
 .project{
   padding: 10px 0 10px 0;
@@ -211,9 +238,4 @@ footer{
 }
 .slideshow li img:not(:target) {
     opacity: 0;
-}
-
-footer{
-  background: @projectsFoldBack;
-  color: @fontColor;
 }
