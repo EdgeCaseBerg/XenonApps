@@ -7,6 +7,8 @@
 @projectsFoldBack: #080808;
 @aboveFoldBackStart: #031229; /*#0D0040;*/
 @aboveFoldBackEnd: #031229;
+@formButtonBackgroundColor: #f5f5f5;
+@formButtonForegroundColor: #f9f9f9;
 
 
 @font-face {
@@ -51,7 +53,7 @@ header p{
   display: inline-block;
   margin-left: 10px;
 }
-#abovefold, #companyFold, #projectsFold,#contactFold{
+#abovefold, #companyFold, #projectsFold, #contactFold{
   padding: 10px 10% 10px 10%;
   padding-bottom: 15%;
 }
@@ -241,4 +243,106 @@ footer{
 }
 .slideshow li img:not(:target) {
     opacity: 0;
+}
+
+/* form section */
+#contact-form {
+  padding: 2em;
+}
+#contact-form label {
+  margin-bottom: 5px;
+}
+#contact-form div.form-input label, input, textarea {
+  display: block;
+  clear: right;
+}
+#contact-form div.form-input {
+  margin-bottom: 1em;
+}
+#contact-form input[type=text], form textarea {
+  border: 1px solid #ebebeb;
+  color: #444;
+  line-height: normal;
+  padding: 6px 10px;
+  width: 100%;
+}
+#contact-form #contact-submit-button {
+  background-color: @formButtonBackgroundColor;
+  background-image: -moz-linear-gradient(top,@formButtonForegroundColor,@formButtonBackgroundColor);
+  background-image: -webkit-linear-gradient(top,@formButtonForegroundColor,@formButtonBackgroundColor);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,@formButtonForegroundColor),color-stop(1,@formButtonBackgroundColor));
+  background-image: linear-gradient(top,@formButtonForegroundColor,@formButtonBackgroundColor);
+  border: 1px solid #e5e5e5;
+  color: #444;
+  padding: 6px 11px;
+  text-shadow: 0 1px 0 #fff;
+
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: arial,sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.54;
+  text-align: center;
+}
+#contact-form div.error {
+  color: red;
+  display: none;
+}
+#contact-form fieldset {
+  border: none;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* confirmation page */
+.confirm {
+  padding: 10px 10% 10px 10%;
+  padding-bottom: 15%;
+}
+
+.confirm h2 {
+  margin-top: 3em;
+  text-align: center;
+  font-size: 2.3em;
+  font-weight: 200;
+  padding: 10px 0 10px 0;
+
+}
+
+.confirm h3 {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 200;
+  padding: 10px 0 10px 0;
+
+}
+
+/* Error pages */
+
+#error-page {
+  padding: 10px 10% 10px 10%;
+  padding-bottom: 15%;
+}
+
+#error-page h1, #error-page p, #error-page a{
+  text-align: center;
+  color: #FFFFFF;
+}
+#error-page img{
+  width:30%;
+  margin-left: 35%;
+  margin-top: 20%;
+}
+#error-page a:hover{
+  color: #00f0f0;
+}
+#error-page #back{
+  font-size: 150%;
+  text-align: center;
+  margin-left: 50%;
 }
