@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded',function(){
 				var numberOfHeatmaps = parseInt(res.data.numberOfHeatmaps.num)
 
 				var commentsOverTimeData = res.data.commentsOverTime
-				var intensityOverTimeData = res.data.intensityOverTime
+				var totalIntensity = res.data.totalIntensity
 
 				var data = {
 					labels : ["Comments","Markers","Heatmap"],
@@ -59,17 +59,12 @@ document.addEventListener('DOMContentLoaded',function(){
 				}
 
 				var data3 = {
-					labels : intensityOverTimeData.map(function(obj){
-						var date = new Date(parseInt(obj.the_time)*1000)
-						return ''+obj.the_time
-					}),
+					labels : ["Total Seconds Worked"],
 					datasets : [
 						{
 							fillColor : "rgba(220,220,220,0.5)",
 							strokeColor : "rgba(220,220,220,1)",
-							data : intensityOverTimeData.map(function(obj){
-								return parseInt(obj.intensity)
-							})
+							data : [totalIntensity]
 						},
 					]
 				}
