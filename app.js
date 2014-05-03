@@ -36,4 +36,58 @@ document.addEventListener('DOMContentLoaded',function(){
 	} else {
 	    form.addEventListener("submit", processForm);
 	}
+
+	
+		var rawData= $.get('//xenonapps.com/dashauth/stats.php', function(res){
+			if(res.status_code < 500){{
+				var numberOfComments = res.data.numberOfComments.num
+				var numberOfMarkers = res.data.numberOfMarkers.num
+				var numberOfHeatmaps = res.data.numberOfHeatmaps.num
+
+				var commentsOverTimeData = res.data.commentsOverTime
+				var intensityOverTimeData = res.data.intensityOverTime
+
+				console.log(res)
+
+				var data = {
+					labels : ["Comments","Markers","Heatmap"],
+					datasets : [
+						{
+							fillColor : "rgba(220,220,220,0.5)",
+							strokeColor : "rgba(220,220,220,1)",
+							data : [numberOfComments, numberOfMarkers, numberOfHeatmaps]
+						},
+					]
+				}
+
+				var data3 = {
+					labels : intensityOverTimeData.map(function(obj){
+						var date = new Date(Date(obj.the_time))
+						return date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds()
+					}),
+					datasets : [
+						{
+							fillColor : "rgba(220,220,220,0.5)",
+							strokeColor : "rgba(220,220,220,1)",
+							data : intensityOverTimeData.map(function(obj){
+								return parseInt(obj.intensity)
+							})
+						},
+					]
+				}
+
+				var ctx = $('#greenupDataBar').get(0).getContext('2d')
+				var thechart = new Chart(ctx).Bar(data);
+
+				var ctx3 = $('#greenupDataHeat').get(0).getContext('2d')
+				var thechart3 = new Chart(ctx3).Line(data3);
+
+
+			}}
+		})
+
+		
+
+
+
 });
