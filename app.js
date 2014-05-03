@@ -38,16 +38,14 @@ document.addEventListener('DOMContentLoaded',function(){
 	}
 
 	
-		var rawData= $.get('https://xenonapps.com/dashauth/stats.php', function(res){
+		var rawData= $.get('https://www.xenonapps.com/dashauth/stats.php', function(res){
 			if(res.status_code < 500){{
-				var numberOfComments = res.data.numberOfComments.num
-				var numberOfMarkers = res.data.numberOfMarkers.num
-				var numberOfHeatmaps = res.data.numberOfHeatmaps.num
+				var numberOfComments = parseInt(res.data.numberOfComments.num)
+				var numberOfMarkers = parseInt(res.data.numberOfMarkers.num)
+				var numberOfHeatmaps = parseInt(res.data.numberOfHeatmaps.num)
 
 				var commentsOverTimeData = res.data.commentsOverTime
 				var intensityOverTimeData = res.data.intensityOverTime
-
-				console.log(res)
 
 				var data = {
 					labels : ["Comments","Markers","Heatmap"],
@@ -62,8 +60,8 @@ document.addEventListener('DOMContentLoaded',function(){
 
 				var data3 = {
 					labels : intensityOverTimeData.map(function(obj){
-						var date = new Date(Date(obj.the_time))
-						return date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds()
+						var date = new Date(parseInt(obj.the_time)*1000)
+						return ''+obj.the_time
 					}),
 					datasets : [
 						{
@@ -80,7 +78,7 @@ document.addEventListener('DOMContentLoaded',function(){
 				var thechart = new Chart(ctx).Bar(data);
 
 				var ctx3 = $('#greenupDataHeat').get(0).getContext('2d')
-				var thechart3 = new Chart(ctx3).Line(data3);
+				var thechart3 = new Chart(ctx3).Bar(data3);
 
 
 			}}
