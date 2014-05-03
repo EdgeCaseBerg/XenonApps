@@ -49,12 +49,12 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
 				var data = {
-					labels : ["Comments","Markers","Heatmap"],
+					labels : ["Comments","Markers"],
 					datasets : [
 						{
 							fillColor : "rgba(220,220,220,0.5)",
 							strokeColor : "rgba(220,220,220,1)",
-							data : [numberOfComments, numberOfMarkers, numberOfHeatmaps]
+							data : [numberOfComments, numberOfMarkers]
 						},
 					]
 				}
