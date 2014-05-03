@@ -47,14 +47,14 @@ document.addEventListener('DOMContentLoaded',function(){
 				var commentsOverTimeData = res.data.commentsOverTime
 				var totalIntensity = parseInt( res.data.totalIntensity.intensity )
 
-				$('#loadcharts).html('<div class="greenup-charts">
-									<h4>How many?</h4>
-									<canvas id="greenupDataBar" width="400" height="400"></canvas>
-								</div>
-								<div class="greenup-charts">
-									<h4>Intensity Over Time</h4>
-									<canvas id="greenupDataHeat" width="400" height="400"></canvas>
-								</div>')
+				$('#loadcharts').html('<div class="greenup-charts">' +
+										'<h4>How many?</h4>' +
+										'<canvas id="greenupDataBar" width="400" height="400"></canvas>'+
+										'</div>' +
+										'<div class="greenup-charts">' +
+										'<h4>Intensity Over Time</h4>' +
+										'<canvas id="greenupDataHeat" width="400" height="400"></canvas>' +
+								'</div>')
 
 				var data = {
 					labels : ["Comments","Markers"],
