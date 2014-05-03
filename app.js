@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded',function(){
 	}
 
 	
-		var rawData= $.get('//xenonapps.com/dashauth/stats.php', function(res){
+		var rawData= $.get('https://xenonapps.com/dashauth/stats.php', function(res){
 			if(res.status_code < 500){{
 				var numberOfComments = res.data.numberOfComments.num
 				var numberOfMarkers = res.data.numberOfMarkers.num
