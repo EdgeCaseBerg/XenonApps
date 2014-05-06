@@ -23,7 +23,7 @@
 }
 html{
   /* font: helvetica,arial,freesans,clean,sans-serif;color:black;line-height:1.4em;background-color:#F8F8F8; */
-  font-family: 'Open Sans', Tahoma, Verdana, Segoe, sans-serif; 
+  font-family: 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -38,7 +38,7 @@ header{
   height: 70px;
   min-height: 70px;
   width: 100%;
-  z-index: 10; 
+  z-index: 10;
   opacity: .97;
 
 }
@@ -86,22 +86,22 @@ header p{
 
   /* Note: This gradient may render differently in browsers that don't support the unprefixed gradient syntax */
 
-/* IE10 Consumer Preview */ 
+/* IE10 Consumer Preview */
 background-image: -ms-linear-gradient(bottom right, #558E65 0%, #558E65 1%, #13093D 90%, #050827 100%);
 
-/* Mozilla Firefox */ 
+/* Mozilla Firefox */
 background-image: -moz-linear-gradient(bottom right, #558E65 0%, #558E65 1%, #13093D 90%, #050827 100%);
 
-/* Opera */ 
+/* Opera */
 background-image: -o-linear-gradient(bottom right, #558E65 0%, #558E65 1%, #13093D 90%, #050827 100%);
 
-/* Webkit (Safari/Chrome 10) */ 
+/* Webkit (Safari/Chrome 10) */
 background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0, #558E65), color-stop(0.01, #558E65), color-stop(0.9, #13093D), color-stop(1, #050827));
 
-/* Webkit (Chrome 11+) */ 
+/* Webkit (Chrome 11+) */
 background-image: -webkit-linear-gradient(bottom right, #558E65 0%, #558E65 1%, #13093D 90%, #050827 100%);
 
-/* W3C Markup, IE10 Release Preview */ 
+/* W3C Markup, IE10 Release Preview */
 background-image: linear-gradient(to top left, #558E65 0%, #558E65 1%, #13093D 90%, #050827 100%);
 }
 
@@ -136,30 +136,38 @@ section ul{
 #companyFold{
   background: @companyFoldBack;
   color: @fontColor;
-  
 
-/* IE10 Consumer Preview */ 
+
+/* IE10 Consumer Preview */
 background-image: -ms-linear-gradient(top right, #558E65 0%, #558E65 1%, #13093D 90%, #050827 100%);
 
-/* Mozilla Firefox */ 
+/* Mozilla Firefox */
 background-image: -moz-linear-gradient(top right, #558E65 0%, #558E65 1%, #13093D 90%, #050827 100%);
 
-/* Opera */ 
+/* Opera */
 background-image: -o-linear-gradient(top right, #558E65 0%, #558E65 1%, #13093D 90%, #050827 100%);
 
-/* Webkit (Safari/Chrome 10) */ 
+/* Webkit (Safari/Chrome 10) */
 background-image: -webkit-gradient(linear, right top, left bottom, color-stop(0, #558E65), color-stop(0.01, #558E65), color-stop(0.9, #13093D), color-stop(1, #050827));
 
-/* Webkit (Chrome 11+) */ 
+/* Webkit (Chrome 11+) */
 background-image: -webkit-linear-gradient(top right, #558E65 0%, #558E65 1%, #13093D 90%, #050827 100%);
 
-/* W3C Markup, IE10 Release Preview */ 
+/* W3C Markup, IE10 Release Preview */
 background-image: linear-gradient(to bottom left, #558E65 0%, #558E65 1%, #13093D 90%, #050827 100%);
 }
 
-#contactFold{
+#contactFold {
   background: @contactFoldBack;
   color: @fontColor;
+}
+
+@media screen and (min-width: 1440px) {
+  #contactFold {
+    background: @contactFoldBack;
+    color: @fontColor;
+    height: 600px;
+  }
 }
 
 #contactFold h2 {
@@ -189,7 +197,7 @@ a{
   -moz-border-radius: 150px;
   box-shadow: 0 0 8px rgba(0, 0, 0, .8);
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8); 
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
   margin: 10px;
 }
 .bio:nth-of-type(even) img{
@@ -242,7 +250,7 @@ footer{
     color: #fff;
     margin: 0 0 0 250px;
 }
-.slideshow li a { 
+.slideshow li a {
     text-decoration: none;
     font: 15px/1 Helvetica, sans-serif;
     -webkit-transition: color 0.5s ease;
@@ -251,7 +259,7 @@ footer{
         -ms-transition: color 0.5s ease;
             transition: color 0.5s ease;
 }
- 
+
 .slideshow li a:hover {
     color: #50b0df;
 }
