@@ -1,22 +1,8 @@
 <header>
 	<h1><a href="index.html"><img id="logo" src="/images/xenonweb.png" alt="Xenon Apps website logo image"/></a></h1>
-	<nav class="ribbon">
-		<ul>
-			<li class="<%= -1 != current.path.indexOf("index") && current.path.length == 1 ? 'arrow' : '' %>"><a href="/index.html">Home</a></li>
-			<li class="<%= -1 != current.path.indexOf("company") ? 'arrow' : '' %>"><a href="/company/">Company</a></li>
-			<li id="drop" class="<%=  -1 != current.path.indexOf("projects") ? 'arrow' : '' %>">
-				<a href="/projects/index.html">Projects</a>
-				<ul>
-				<% for(var slug in public.projects._data){ %>
-					
-						<li>
-					  		<a href="/projects/<%= slug %>.html"><%= public.projects._data[slug].title %></a>
-					  	</li>
-					
-				<% }; %>
-				</ul>
-			</li>
-			<li class="<%= -1 != current.path.indexOf("contact") ? 'arrow' : '' %>"><a href="/contact.html">Contact Us</a></li>
-		</ul>
-	</nav>
+	<p>
+		<em>
+		Reliable, Efficient, and Stable
+		</em>
+	</p>
 </header>

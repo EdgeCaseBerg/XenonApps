@@ -4,6 +4,7 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/main.css' />
     <script src="/app.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <meta name="description" content="<%= description %>" />
     <META name="keywords" content="Xenon Apps, xenon, website"> <!-- Add more keywords as we create pages (Names for profiles)-->
     <meta name="robots" content="index, follow" >
@@ -11,11 +12,30 @@
     <meta name="author" content="Ethan Eldridge, Shelby Smullen, Joshua Dickerson">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/ico">
     <link rel="icon" href="/images/favicon.ico" type="image/ico">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-47079120-1', 'xenonapps.com');
+      ga('send', 'pageview');
+
+    </script>
   </head>
   <body>
     <%- partial("_header") %>
-    <div id="content" class="index">
+    <div id="abovefold" class="index">
     <%- yield %>
+    </div>
+    <div id="companyFold">
+      <%- partial("/company/index.ejs") %>
+    </div>
+    <div id="contactFold">
+      <%- partial("contact.ejs") %>
+    </div>
+    <div id="projectsFold">
+      <%- partial("/projects/index.ejs") %>
     </div>
     <%- partial("_footer.ejs") %>
   </body>

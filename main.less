@@ -1,315 +1,327 @@
+@backgroundColor: #333;
+@profileImageSize: 150px;
+@linkColor: #55acee;
+@fontColor: #ccc;
+@companyFoldBack: #303030;
+@contactFoldBack: #1d1d1d;
+@projectsFoldBack: #080808;
+@aboveFoldBackStart: #031229; /*#0D0040;*/
+@aboveFoldBackEnd: #031229;
+@formButtonBackgroundColor: #f5f5f5;
+@formButtonForegroundColor: #f9f9f9;
+
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-Light.ttf');
+}
+
 /* General Background and layout */
-html, body {
-  height: 100%;
-}
-body {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto -3em; /* the bottom margin is the negative value of the footer's height */
-}
-#footer, .push {
-  height: 3em; /* .push must be the same height as .footer */
-}
-#footer p{
+*{
   padding: 0;
   margin: 0;
-}
-#footer > p {
-  padding-top:5px;
 }
 html{
-  /*background: url('../images/dark_mosaic.png'); /*http://subtlepatterns.com/dark-mosaic/*/
-  color: #ffffff; /*I need to see */
-  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
-  background-color: #333;
+  /* font: helvetica,arial,freesans,clean,sans-serif;color:black;line-height:1.4em;background-color:#F8F8F8; */
+  font-family: 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
   padding: 0;
   margin: 0;
-  color: #cbcbcb;
 }
 body{
-  padding: 0;
-  margin: 0;
-  background-color: #1c1c1c
 }
+
 header{
-  padding-top: 10px;
-  padding-bottom: 5px;
-  width: 80%;
-  margin-left: 10%;
-  background-color: black;
-  box-shadow: 0px .5em .5em #000006;
-    
-  background-image: -ms-linear-gradient(bottom, #000000 0%, #010101 50%, #010101 100%);
-  background-image: -moz-linear-gradient(bottom, #000000 0%, #010101 50%, #010101 100%);
-  background-image: -o-linear-gradient(bottom, #000000 0%, #010101 50%, #010101 100%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #000000), color-stop(0.5, #010101), color-stop(1, #010101));
-  background-image: -webkit-linear-gradient(bottom, #000000 0%, #010101 50%, #010101 100%);
-  background-image: linear-gradient(to top, #000000 0%, #010101 50%, #010101 100%);
+  background-color: @backgroundColor;
+  color: @fontColor;
+  padding: 10px 2% 5px 2%;
+  position: fixed;
+  height: 70px;
+  min-height: 70px;
+  width: 100%;
+  z-index: 10;
+  opacity: .97;
+
 }
-#logo{ /*It may be wise to have multiple image sizes instead of just setting the logo? not sure*/
-  width:10%;
-  margin-left: 10%;
-  background-color:rgba(0,0,128,0.05);
+#logo{
+  height: 50px;
+  padding-left: 10%;
+}
+header h1{
+  display: inline-block;
+}
+header p{
+  display: inline-block;
+  margin-left: 10px;
+}
+#abovefold, #companyFold, #projectsFold,#contactFold{
+  padding: 10px 10% 10px 10%;
+  padding-bottom: 15%;
+}
+
+/* for pushing below the header */
+#abovefold{
+  padding-top: 80px;
+  color: @fontColor;
+
+  /* Note: This gradient may render differently in browsers that don't support the unprefixed gradient syntax */
+
+/* IE10 Consumer Preview */
+background-image: -ms-linear-gradient(bottom right, #558E65 0%, #558E65 1%, #13093D 90%, #050827 100%);
+
+/* Mozilla Firefox */
+background-image: -moz-linear-gradient(bottom right, #558E65 0%, #558E65 1%, #13093D 90%, #050827 100%);
+
+/* Opera */
+background-image: -o-linear-gradient(bottom right, #558E65 0%, #558E65 1%, #13093D 90%, #050827 100%);
+
+/* Webkit (Safari/Chrome 10) */
+background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0, #558E65), color-stop(0.01, #558E65), color-stop(0.9, #13093D), color-stop(1, #050827));
+
+/* Webkit (Chrome 11+) */
+background-image: -webkit-linear-gradient(bottom right, #558E65 0%, #558E65 1%, #13093D 90%, #050827 100%);
+
+/* W3C Markup, IE10 Release Preview */
+background-image: linear-gradient(to top left, #558E65 0%, #558E65 1%, #13093D 90%, #050827 100%);
+}
+
+#abovefold p:first-of-type{
+  padding-top: 2em;
+  padding-bottom: 1em;
+  font-size: 2em;
+}
+
+#projectsFold{
+  padding-bottom: 0%;
+}
+section h1:first-of-type{
+  text-align: center;
+  font-size: 4rem;
+  line-height: 1.5;
+  font-weight: 300;
+  padding: 10px 0 10px 0;
+}
+
+section h2:first-of-type {
+  text-align: center;
+  font-size: 3.2em;
+  font-weight: 200;
+  padding: 10px 0 10px 0;
+}
+section ul{
+  padding: 10px 0 10px 0;
+  margin-left: 20px;
+  font-size: 1.2em;
+}
+#companyFold{
+  background: @companyFoldBack;
+  color: @fontColor;
+
+
+/* IE10 Consumer Preview */
+background-image: -ms-linear-gradient(top right, #558E65 0%, #558E65 1%, #13093D 90%, #050827 100%);
+
+/* Mozilla Firefox */
+background-image: -moz-linear-gradient(top right, #558E65 0%, #558E65 1%, #13093D 90%, #050827 100%);
+
+/* Opera */
+background-image: -o-linear-gradient(top right, #558E65 0%, #558E65 1%, #13093D 90%, #050827 100%);
+
+/* Webkit (Safari/Chrome 10) */
+background-image: -webkit-gradient(linear, right top, left bottom, color-stop(0, #558E65), color-stop(0.01, #558E65), color-stop(0.9, #13093D), color-stop(1, #050827));
+
+/* Webkit (Chrome 11+) */
+background-image: -webkit-linear-gradient(top right, #558E65 0%, #558E65 1%, #13093D 90%, #050827 100%);
+
+/* W3C Markup, IE10 Release Preview */
+background-image: linear-gradient(to bottom left, #558E65 0%, #558E65 1%, #13093D 90%, #050827 100%);
+}
+
+#contactFold {
+  background: @contactFoldBack;
+  color: @fontColor;
+}
+
+@media screen and (min-width: 1440px) {
+  #contactFold {
+    background: @contactFoldBack;
+    color: @fontColor;
+    height: 600px;
+  }
+}
+
+#contactFold h3, #contactFold h3 + p{
+  padding: 5px 0 5px 0;
+}
+
+#projectsFold{
+  background: @projectsFoldBack;
+  color: @fontColor;
 }
 a{
-  color: #eee;
-}
-a:hover{
-  color: #fff;
-}
-h2{
-  color: #55acee;
-}
-#content{  
-  box-shadow: 0px 0.4em .5em black;
-  margin-top: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background-color: #222;
-  min-height: 400px;
-}
-#content.index{
-  width: 80%;
-  margin-left: 10%;
-}
-#footer p{
-  text-align: center;
-}
-nav ul{
-  height: 100%;
-  text-align: center;
-  list-style-type: none;
-  display: block;
-  border-bottom: thin solid #000066;
-  z-index: 10;
-}
-nav ul li{
-  width: 20%;
-  display: inline-block;
-}
-nav ul li:hover{
-}
-nav ul li.arrow:before{
-  content:  ' ';
-  height: 100%;
-  border-color: transparent transparent #000  transparent;
-  border-style: solid;
-  border-width: 20px;
-  position: relative;
-  top: .2em;
-  right: -2.5em ;
-  z-index: -1;
-}
-
-nav a{
+  color: @linkColor;
   text-decoration: none;
-  font-weight: bold;
-  font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-}
-nav a:hover{
-  color: #3E7EAE;
 }
 
-section{
-  margin-left: 10%;
-  width: 80%;
+.bio img{
+  width: @profileImageSize;
+  height: @profileImageSize;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  margin: 10px;
 }
-section:last-child{
-  margin-bottom: 4em;
+.bio:nth-of-type(even) img{
+  float: left;
 }
-section dl dt{
-  border-bottom: #00f0ff solid thick;
-  font-size: 110%;
-  font-weight: bolder;
-  text-align: center;
+.bio:nth-of-type(odd) img{
+  float: right;
 }
-section dl dd p{
-  width: 80%;
-}
-.emphasize{
-  font-style: italic;
-}
-
-#footer{
-  margin-bottom: 0;
-  padding-bottom: 0;
+.bio{
   clear: both;
-  position:fixed;
-  bottom:0;
 }
 
-/* Profiles and Company section */
-#member-list{
-  display: inline-block;
-  list-style-type: none;
-  margin: 0em 0 1em 0;
-  margin-left: 1em;
-  padding-left: 0;
+
+.bio p{
+  padding-bottom: 10px;
+}
+.bio h2:first-of-type, .project h2:first-of-type{ /* need first of type to override section h2 pseudo */
+  font-size: 16pt;
+}
+#greenuplogo{
+  float: right;
+  margin: 10px;
+}
+footer{
+  text-align: center;
+  background: @projectsFoldBack;
+  color: @fontColor;
+}
+.project{
+  padding: 10px 0 10px 0;
+}
+
+
+/* Green Up Slider for images */
+#projectsFold .slideshow {
+  background-color: black;
+    margin: 50px auto;
+    position: relative;
+    width: 400px;
+    min-height: 420px;
+}
+.slideshow ul {
+  list-style: none;
+}
+.slideshow li {
+    color: #fff;
+    margin: 0 0 0 250px;
+}
+.slideshow li a {
+    text-decoration: none;
+    font: 15px/1 Helvetica, sans-serif;
+    -webkit-transition: color 0.5s ease;
+       -moz-transition: color 0.5s ease;
+         -o-transition: color 0.5s ease;
+        -ms-transition: color 0.5s ease;
+            transition: color 0.5s ease;
+}
+
+.slideshow li a:hover {
+    color: #50b0df;
+}
+.slideshow li img {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  max-height: 400px;
+  padding: 0;
+  margin: 0;
+  z-index: -1;
+  vertical-align: bottom;
+  -webkit-transition: opacity 1s ease-in-out;
+     -moz-transition: opacity 1s ease-in-out;
+       -o-transition: opacity 1s ease-in-out;
+      -ms-transition: opacity 1s ease-in-out;
+          transition: opacity 1s ease-in-out;
+}
+.slideshow li img:target {
+    z-index: 1;
+}
+.slideshow li img:not(:target) {
+    opacity: 0;
+}
+
+/* form section */
+#contact-form {
+  padding: 2em;
+}
+#contact-form label {
+  margin-bottom: 5px;
+}
+#contact-form div.form-input label, input, textarea {
+  display: block;
+  clear: right;
+}
+#contact-form div.form-input {
+  margin-bottom: 1em;
+}
+#contact-form input[type=text], form textarea {
+  border: 1px solid #ebebeb;
+  color: #444;
+  line-height: normal;
+  padding: 6px 10px;
   width: 100%;
 }
-#member-list li{  
-  width: 13%;
-  text-align: center;
-  font-weight: bolder;
-  border-bottom: thin solid white;
-  border-bottom-right-radius: 1em;
-  border-bottom-left-radius: 1em;
-  border-top-left-radius: .5em;
-  border-top-right-radius: .5em;
-  display: inline-block;
-  background-color: rgb(24.3,49.4,68.2);
-  transition: opacity,background-color .5s ease-in-out;
-  -moz-transition: opacity,background-color .5s ease-in-out;
-    -webkit-transition: opacity,background-color .5s ease-in-out;
-} 
-#member-list li a{
-  padding: .05em;
-  display: block;
-  text-decoration: none;
-  color: #eee;
-  text-shadow: rgba(0,0,0,0.3) 0 1px 0;
-}
-#member-list li:hover{
-  background-color: #3E7EAE;
-  color: black;
+#contact-form #contact-submit-button {
+  background-color: @formButtonBackgroundColor;
+  background-image: -moz-linear-gradient(top,@formButtonForegroundColor,@formButtonBackgroundColor);
+  background-image: -webkit-linear-gradient(top,@formButtonForegroundColor,@formButtonBackgroundColor);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,@formButtonForegroundColor),color-stop(1,@formButtonBackgroundColor));
+  background-image: linear-gradient(top,@formButtonForegroundColor,@formButtonBackgroundColor);
+  border: 1px solid #e5e5e5;
+  color: #444;
+  padding: 6px 11px;
+  text-shadow: 0 1px 0 #fff;
+
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
   cursor: pointer;
-} 
-#member-list li.active{
-  background-color: #3E7EAE;
-}
-#profile-container{
-  width:100%;
-  margin: 1em 0 1em 0;
-  margin-left: 10%;
-}
-#profile-container p{
   display: inline-block;
+  font-family: arial,sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.54;
+  text-align: center;
+}
+#contact-form div.error {
+  color: red;
+  display: none;
+}
+#contact-form fieldset {
+  border: none;
   width: 50%;
-  margin: 2% 5% 2% 2%
-}
-#profile-container img + p{
-  margin: 0 2% 0 2%;
-}
-#profile-container img{
-  vertical-align: top;
-  display: inline-block;
-  
-  float: right;
-  margin-right: 18%;
-  padding-bottom: 2em;
-  width: 250px;
-  height: 250px;
-}
-#bio{
-  min-height: 350px;
-}
-#bio h2{
-  margin: 2% 2% 0 2%;
-}
-#bio h2, #bio h2 a {
-  color: #55acee;
-  text-shadow: rgba(0,0,0,0.3) 0 1px 0;
-}
-#bio h2 a{
-  text-decoration: none;
-}
-#index-logo{
-  width: 25%;
-  height: auto !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.ribbon {
-    width: 100%;
-    margin: 10px auto;
-    padding: 0 10px 0;
-    position: relative;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-.ribbon ul, .ribbon p {
-    display: block;
-    height: 30px;
-    line-height: 1.3;
+/* confirmation page */
+.confirm h2 {
+  margin-top: 3em;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 200;
+  padding: 10px 0 10px 0;
 
-    width: 99.6%;
-    margin: 0;
-    padding: 5px 10px;
-    position: relative;
-    left: -16px;
-    top: 8px;
-    color: #cfcfcf;
-    text-shadow: 0 1px 1px #111;
-    border-top: 1px solid #363636;
-    border-bottom: 1px solid #202020;
-    background: #000006; /* Can't decide between these two */
-    background: #031229;
-    background: linear-gradient(top, #383838 0%, #262626 100%);
-    border-radius: 2px 2px 0 0;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
-}
-.ribbon ul::before,
-.ribbon ul::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    position: absolute;
-    bottom: -11px;
-    z-index: -10;
-    border: 5px solid;
-    border-color: #0A3475 transparent transparent transparent;    
-}
-.ribbon ul::before {left: 0;}
-.ribbon ul::after {right: 0;}
-
-.ribbon p{
-  margin-left: 0;
-}
-#footer.ribbon{
-  margin-left: 10%;
-  width: 82%;
-  left: -16px;
-}
-#footer p{
-  left: 0;
-  margin-left: 0;
-  padding-left: 0;
 }
 
-.project-page img{
-  display: inline-block;
-  float: right;
-  margin: 1%;
-}
+.confirm h3 {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 200;
+  padding: 10px 0 10px 0;
 
-/* Drop down menu for projects */
-#drop ul{
-  position: absolute;
-  left: -99999px;
-}
-#drop:hover ul{
-  top: 0em;
-  left: 49%;
-  width: 20%;
-  display: block;
-}
-#drop:hover ul li{
-  width: auto;
-  display: block;
-  float: none;
-  height: 100%;
-  background: #031229;
-  box-shadow: .0em .25em 0 #0A3475;
-}
-#drop:hover ul li:hover{
-  background-color: black;
-  border: solid;
-  border-color: transparent #fff transparent #fff;
-}
-#drop ul li:hover a{
-  background-color: #000006;
-  display: block;
-  background: linear-gradient(top, #383838 0%, #262626 100%);
-    border-radius: 2px 2px 0 0;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
