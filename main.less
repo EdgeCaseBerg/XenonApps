@@ -157,9 +157,21 @@ background-image: -webkit-linear-gradient(top right, #558E65 0%, #558E65 1%, #13
 background-image: linear-gradient(to bottom left, #558E65 0%, #558E65 1%, #13093D 90%, #050827 100%);
 }
 
-#contactFold{
-  background: @contactFoldBack;
-  color: @fontColor;
+@media screen and (max-width: 980px) {
+  /* smaller than 980px*/
+  #contactFold {
+    background: @contactFoldBack;
+    color: @fontColor;
+  }
+} 
+
+@media screen and (min-width: 980px) {
+  /* larger than 980px*/
+  #contactFold {
+    background: @contactFoldBack;
+    color: @fontColor;
+    height: 770px;
+  }
 }
 
 #contactFold h2 {
