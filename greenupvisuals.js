@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded',function(){
 								0.8: '#00e500',
 								1: '#00ff00'
 							},
-					radius: 15,
+					radius: 18,
 				}
 				var heat = L.heatLayer(heatmapDatum, options).addTo(map);
 
