@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded',function(){
 								0.7: '#00cc00',
 								0.8: '#00e500',
 								1: '#00ff00'
-							}
+							},
+					radius: 15,
 				}
 				var heat = L.heatLayer(heatmapDatum, options).addTo(map);
 
