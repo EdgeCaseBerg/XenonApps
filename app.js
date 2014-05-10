@@ -30,14 +30,17 @@ document.addEventListener('DOMContentLoaded',function(){
 	    // prevent the default form behavior
 	    return false;
 	}
+
 	var form = document.getElementById('contact-form');
-	if (form.attachEvent) {
-	    form.attachEvent("submit", processForm);
-	} else {
-	    form.addEventListener("submit", processForm);
+	if(form){
+		if (form.attachEvent) {
+		    form.attachEvent("submit", processForm);
+		} else {
+	    	form.addEventListener("submit", processForm);
+		}
 	}
 
-	
+	if($('#loadcharts').length > 0){
 		var rawData= $.get('https://www.xenonapps.com/dashauth/stats.php', function(res){
 			if(res.status_code < 500){{
 				var numberOfComments = parseInt(res.data.numberOfComments.num)
@@ -87,6 +90,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
 			}}
 		})
+	}
 
 		
 
