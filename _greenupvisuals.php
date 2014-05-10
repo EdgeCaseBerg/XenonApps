@@ -5,6 +5,7 @@
 */
 header('Content-Type: application/json');
 header("Access-Control-Allow-Origin: *");
+ini_set("memory_limit", "256M");
 $lastMod = gmdate('D, d M Y H:i:s \G\M\T', filemtime(__FILE__));
 $eTag = md5("$lastMod" . __FILE__ );
 $ifmod = isset($_SERVER['HTTP_IF_MODIFIED_SINCE']) ? $_SERVER['HTTP_IF_MODIFIED_SINCE'] == $lastMod : null; 
@@ -49,10 +50,13 @@ if( ! mysql_select_db(DB_NAME, $link) ){
 $heatmapJS = array();
 $heatmapLapse = array();
 $heatmapResource = mysql_unbuffered_query("SELECT intensity as timeworked, DATE_FORMAT(created_time, '%H') as created_time, latitude, longitude FROM heatmap ORDER BY created_time ASC",$link);
+
 while ($row = mysql_fetch_object($heatmapResource)) {
 	/* Convert it into structures for heatmap and timelapse */
-	$heatmapJS[] = array(floatval($row->latitude), floatval($row->longitude), int($row->timeworked));
-	$heatmapLapse["$row->created_time"][] = array(floatval($row->latitude), floatval($row->longitude), int($row->timeworked));
+	$heatmapJS[] = array(floatval($row->latitude), floatval($row->longitude), intval($row->timeworked));
+	for ($i=0; $i <= intval($row->created_time) ; $i++) { 
+		$heatmapLapse["$i"][] = array(floatval($row->latitude), floatval($row->longitude), intval($row->timeworked));
+	}
 }
 mysql_free_result($heatmapResource);
 mysql_close($link);
