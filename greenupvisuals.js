@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded',function(){
 	$.get('//greenup.xenonapps.com/dash/_greenupvisuals.php', function(res){
 			if(res.status_code < 500){
 				heatmapDatum = res.data.heatmapJS
-				console.log(res)
+				
 				var options = {
 					maxZoom: 18,
-					gradient: {0: 'blue', 0.65: 'lime', 1: 'green'}
+					gradient: {0: 'lime', 0.65: 'lightgreen', 1: 'green'}
 				}
 				var heat = L.heatLayer(heatmapDatum, options).addTo(map);
 
