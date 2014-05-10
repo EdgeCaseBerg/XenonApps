@@ -9,9 +9,19 @@ document.addEventListener('DOMContentLoaded',function(){
 			if(res.status_code < 500){
 				heatmapDatum = res.data.heatmapJS
 				
+				
+				
 				var options = {
 					maxZoom: 18,
-					gradient: {0: 'lime', 0.65: 'lightgreen', 1: 'green'}
+					gradient: {	0: '#004c00', 
+								0.15: '#006600', 
+								0.25: '#007f00',
+								0.5: '#009900',
+								0.6: '#00b200',
+								0.7: '#00cc00',
+								0.8: '#00e500',
+								1: '#00ff00'
+							}
 				}
 				var heat = L.heatLayer(heatmapDatum, options).addTo(map);
 
