@@ -27,11 +27,14 @@ document.addEventListener('DOMContentLoaded',function(){
 				var heat = L.heatLayer(heatmapDatum, options).addTo(map);
 
 				$('#hmLoaderContainer').fadeOut(500, function(evt){
-					$('#hmLoaderContainer').html('<div id="slider-container"><span>Hour Of Day: May 2nd Midnight</span><input id="visual-slider" type="range" name="hour_of_day" min="0" max="23"><span>May 3rd Midnight</span></div>')
+					$('#hmLoaderContainer').html('<div id="slider-container"><span>Hour Of Day: <span id="daytime"></span></span><input id="visual-slider" type="range" name="hour_of_day" min="0" max="23"></div>')
 					$('#hmLoaderContainer').fadeIn()
+					$('#daytime').text('12pm')
 				});
+
 				$('#hmLoaderContainer').on('change', '#visual-slider', function(){
 					var val = $(this).val()
+					$('#daytime').text(val < 12 ? val + 'am' : ( val == 12 ? '12pm' : val -12 +'pm'))
 					var idx = 23 - val //23 becuase our array is actually upside down
 					if(res.data.heatmapLapse[idx]){
 						heat.setLatLngs(res.data.heatmapLapse[idx])
