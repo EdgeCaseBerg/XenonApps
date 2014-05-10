@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded',function(){
 				var heat = L.heatLayer(heatmapDatum, options).addTo(map);
 
 				$('#hmLoaderContainer').fadeOut(500, function(evt){
-					$('#hmLoaderContainer').html('Hour Of Day: May 2nd Midnight<input id="visual-slider" type="range" name="hour_of_day" min="0" max="23">May 3rd Midnight')
+					$('#hmLoaderContainer').html('<div id="slider-container"><span>Hour Of Day: May 2nd Midnight</span><input id="visual-slider" type="range" name="hour_of_day" min="0" max="23"><span>May 3rd Midnight</span></div>')
 					$('#hmLoaderContainer').fadeIn()
 				});
 				$('#hmLoaderContainer').on('change', '#visual-slider', function(){
