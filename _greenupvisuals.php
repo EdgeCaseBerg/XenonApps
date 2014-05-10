@@ -5,7 +5,6 @@
 */
 header('Content-Type: application/json');
 header("Access-Control-Allow-Origin: *");
-ini_set("memory_limit", "256M");
 $lastMod = gmdate('D, d M Y H:i:s \G\M\T', filemtime(__FILE__));
 $eTag = md5("$lastMod" . __FILE__ );
 $ifmod = isset($_SERVER['HTTP_IF_MODIFIED_SINCE']) ? $_SERVER['HTTP_IF_MODIFIED_SINCE'] == $lastMod : null; 
@@ -20,7 +19,7 @@ if (($ifmod || $iftag) && ($ifmod !== false && $iftag !== false)) {
     header("ETag: $eTag");
     header('Expires: ' . gmdate('D, d M Y H:i:s', filemtime(__FILE__) + $iSecondsToCache) . ' GMT');
 }
-
+ini_set("memory_limit", "198M"); //this script is allowed to do a lot of work
 $conf = json_decode(file_get_contents("/etc/conf/local.conf"), 1);
 define("DB_USER", $conf["mysql-user"]);
 define("DB_HOST", $conf["host"]);
