@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded',function(){
     	maxZoom: 18
 	}).addTo(map)
 
-	$.get('//greenup.xenonapps.com/dash/_greenupvisuals.php', function(res){
+	$.get('//apps.xenonapps.com/greenupvisuals.php', function(res){
 			if(res.status_code < 500){
 				heatmapDatum = res.data.heatmapJS
 				
